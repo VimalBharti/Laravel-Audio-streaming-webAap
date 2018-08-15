@@ -16,7 +16,7 @@
           <div class="left-sidebar-top">
             <img src="/avatar/{{$user->avatar}}">
             <h1>{{$user->name}}</h1>
-            <h2>{{$user->city}}, {{$user->country->name}}</h2>
+            <h2>{{$user->city}}, </h2>
 
             <div class="column">
               <ul>
