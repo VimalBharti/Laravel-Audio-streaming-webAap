@@ -67,8 +67,8 @@
       <div class="navbar-menu">
         <div class="navbar-end">
           @if (Auth::guest())
-            <a class="navbar-item"><b-icon icon="fas fa fa-facebook"></b-icon></a>
-            <a class="navbar-item"><b-icon icon="fas fa fa-twitter"></b-icon></a>
+            <a class="navbar-item" href="https://www.facebook.com/bybu.cc" target="_blank"><b-icon icon="fas fa fa-facebook"></b-icon></a>
+            <a class="navbar-item" href="https://twitter.com/Bybu_cc" target="_blank"><b-icon icon="fas fa fa-twitter"></b-icon></a>
             <a href="{{route('showcase.dash')}}" class="navbar-item showcase-btn">
               <span>Showcase</span>
             </a>
