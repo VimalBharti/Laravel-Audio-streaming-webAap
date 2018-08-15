@@ -59,6 +59,8 @@ class ProfileController extends Controller
       $countries = Country::all();
       $posts = Post::where('user_id', $user->id)->get();
 
+      dd($user);
+
       $headers = Post::where([
         ['category_id', '1']
       ])->get();

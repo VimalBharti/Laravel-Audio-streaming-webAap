@@ -10,7 +10,7 @@
           <a href="{{url('/register')}}">Register Now</a>
         </div>
         <div class="login-background-image">
-          <img src="{{asset('images/head.jpg')}}">
+          <img src="{{asset('images/head.jpg')}}" alt="bybu.cc">
         </div>
       </div>
 

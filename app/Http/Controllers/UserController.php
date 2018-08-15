@@ -53,7 +53,7 @@ class UserController extends Controller
         ['user_id', Auth::id()],
         ['category_id', '3']
       ])->get();
-      // $countpost = Post::where('user_id', Auth::id() )->count();
+      
       return view('members.dashboard', compact('user', 'posts', 'category', 'headers', 'footers', 'templates'));
   }
 
@@ -65,7 +65,7 @@ class UserController extends Controller
       $countries = Country::all();
 
       $category = Category::all();
-      // $posts = Post::orderBy('created_at', 'desc')->paginate(12);
+
       $posts = Post::where('user_id', $user->id)->get();
 
       $headers = Post::where([

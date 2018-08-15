@@ -6,7 +6,7 @@
       <div class="column is-4 is-offset-4">
         <h2>Admin</h2>
         <div class="logo">
-          <a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}"></a>
+          <a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="bybu.cc"></a>
         </div>
 
         <form method="POST" action="{{ route('admin.login.submit') }}" aria-label="{{ __('Login') }}">

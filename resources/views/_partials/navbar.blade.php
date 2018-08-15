@@ -2,7 +2,7 @@
   <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item is-hidden-mobile" href="{{route('home')}}">
-          <img src="{{asset('images/logo.png')}}" >
+          <img src="{{asset('images/logo.png')}}" alt="bybu.cc">
         </a>
         <span class="navbar-burger burger nav-toggle" data-target="navMenu">
           <span></span>

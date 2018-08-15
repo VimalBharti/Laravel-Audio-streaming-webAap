@@ -2,7 +2,7 @@
   <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="{{route('home')}}">
-          <img src="{{asset('images/s-logo.png')}}" >
+          <img src="{{asset('images/s-logo.png')}}" alt="bybu.cc">
         </a>
           <span class="navbar-burger burger" data-target="navMenu">
             <span></span>

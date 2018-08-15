@@ -9,7 +9,7 @@
             <p>Create your account, it takes less than a minute.</p>
           </div>
           <div class="login-background-image">
-            <img src="{{asset('images/head.jpg')}}">
+            <img src="{{asset('images/head.jpg')}}" alt="bybu.cc">
           </div>
       </div>
 
