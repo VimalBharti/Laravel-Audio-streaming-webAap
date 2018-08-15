@@ -4,7 +4,7 @@
 
   <div class="plain-footer-container public-profile-page">
     <div class="menu-bar">
-      @include('_partials.navbar')
+      
     </div>
 
     <div class="container is-widescreen with-plain-footer">
@@ -89,7 +89,7 @@
                                   <a href="#"><p class="title is-5">{{$post->user_name}}</p></a>
                                 </div>
                                 <div class="delete-btn">
-                                  
+
                                 </div>
                               </div>
 

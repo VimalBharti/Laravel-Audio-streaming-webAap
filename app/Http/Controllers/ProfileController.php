@@ -69,8 +69,6 @@ class ProfileController extends Controller
         ['category_id', '3']
       ])->get();
 
-      dd($headers);
-
       return view('members.profile',  compact('user', 'post', 'mypost', 'follower', 'countries', 'posts', 'headers', 'footers', 'templates') );
     }
 
