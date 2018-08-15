@@ -4,12 +4,12 @@
 
   <div class="plain-footer-container showcase-page">
     <div class="menu-bar">
-      @include('_partials.Snavbar')
+      @include('_partials.navbar')
     </div>
 
     <div class="with-plain-footer">
 
-      <nav class="left-navbar">
+      <nav class="left-navbar is-hidden-mobile">
         <div class="left-navbar-inner">
           <ul>
             <li class="main-logo">
@@ -77,6 +77,6 @@
 
   </div>
 
-<Myplainfooter></Myplainfooter>
+  @include('_partials.plainfooter')
 
 @endsection

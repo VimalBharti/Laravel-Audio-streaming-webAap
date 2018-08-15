@@ -4,7 +4,7 @@
 
   <div class="showcase-homepage">
 
-    @include('_partials.Snavbar')
+    @include('_partials.navbar')
 
     <section class="hero is-medium is-bold has-text-centered">
       <div class="hero-body">
@@ -27,6 +27,6 @@
 
   </div>
 
-  <Myplainfooter></Myplainfooter>
+  @include('_partials.footer')
 
 @endsection

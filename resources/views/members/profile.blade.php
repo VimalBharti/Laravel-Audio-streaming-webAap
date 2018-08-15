@@ -23,16 +23,22 @@
               @endif
             </h2>
 
-            <div class="column">
+            <div class="column social-icons-links">
               <ul>
                 @if(isset ($user->behance))
-                    <li><a href="{{$user->behance}}" target="_blank"><img src="{{asset('images/icons/behance.png')}}"></a></li>
+                    <li><a href="{{$user->behance}}" target="_blank">
+                      <i class="fa fa-behance"></i>
+                    </a></li>
                 @endif
                 @if(isset ($user->twitter))
-                    <li><a href="{{$user->twitter}}" target="_blank"><img src="{{asset('images/icons/twitter.png')}}"></a></li>
+                    <li><a href="{{$user->twitter}}" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a></li>
                 @endif
                 @if(isset ($user->dribbble))
-                    <li><a href="{{$user->dribbble}}" target="_blank"><img src="{{asset('images/icons/dribble.png')}}"></a></li>
+                    <li><a href="{{$user->dribbble}}" target="_blank">
+                      <i class="fa fa-dribbble"></i>
+                    </a></li>
                 @endif
               </ul>
             </div>

@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item is-hidden-mobile" href="{{route('home')}}">
+        <a class="navbar-item" href="{{route('home')}}">
           <img src="{{asset('images/logo.png')}}" alt="bybu.cc">
         </a>
         <span class="navbar-burger burger nav-toggle" data-target="navMenu">
@@ -44,7 +44,7 @@
 
             <hr class="dropdown-divider">
             <li>
-              <a href="{{route('me.index')}}" target="_blank">
+              <a href="{{route('showcase.dash')}}">
                   <b-icon icon="fas fa fa-plus-circle"></b-icon>
                   <strong>SHOWCASE</strong>
               </a>
@@ -150,7 +150,7 @@
 
                 <hr class="dropdown-divider">
                 <b-dropdown-item has-link>
-                    <a href="{{route('me.index')}}" target="_blank">
+                    <a href="{{route('showcase.dash')}}">
                         <b-icon icon="fas fa fa-plus-circle"></b-icon>
                         <strong>SHOWCASE</strong>
                     </a>

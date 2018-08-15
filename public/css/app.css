@@ -22455,6 +22455,44 @@ label.panel-block:hover {
   color: #0ab46d;
 }
 
+.plain-footer {
+  background-color: #fefefe;
+  padding-top: 6em;
+}
+
+.plain-footer img.foot-logo {
+  width: 130px;
+}
+
+.plain-footer .footer-text h1 {
+  color: #666;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.plain-footer p.foot-p {
+  color: #777;
+}
+
+.main-footer {
+  background-color: #171727;
+  padding-top: 6em;
+}
+
+.main-footer img.foot-logo {
+  width: 62px;
+}
+
+.main-footer .footer-text h1 {
+  color: #dbdbdb;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.main-footer p.foot-p {
+  color: #777;
+}
+
 .home-top {
   height: 500px;
 }
@@ -22855,6 +22893,22 @@ label.panel-block:hover {
   -o-object-fit: contain;
      object-fit: contain;
   border: 1px solid #efefef;
+}
+
+.public-profile-page .left-sidebar .left-sidebar-top .social-icons-links li {
+  display: inline;
+}
+
+.public-profile-page .left-sidebar .left-sidebar-top .social-icons-links li img {
+  width: 38px;
+  height: 38px;
+  background: #890454;
+}
+
+.public-profile-page .left-sidebar .left-sidebar-top .social-icons-links li .fa {
+  color: #890454;
+  font-size: 1.5em;
+  padding: 8px;
 }
 
 .public-profile-page .left-sidebar .left-sidebar-top h1 {
@@ -23492,6 +23546,26 @@ label.panel-block:hover {
 
   .m-navbar-menu li a:hover {
     color: #444;
+  }
+
+  .showcase-area {
+    margin: 0px !important;
+  }
+
+  .showcase-area .delete-button-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .showcase-area .delete-button-box input.delete-button {
+    padding: 8px 15px;
+    border: 0px;
+    cursor: pointer;
+    background: #890454;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px;
   }
 }
 

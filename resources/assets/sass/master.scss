@@ -46,6 +46,21 @@
   }
 }
 
+// Footer
+.plain-footer{
+  background-color: #fefefe;padding-top: 6em;
+  img.foot-logo{width: 130px;}
+  .footer-text h1{color: #666;font-size: 1.5em;margin-top: 1em;}
+  p.foot-p{color: #777;}
+}
+.main-footer{
+  background-color: #171727;padding-top: 6em;
+  img.foot-logo{width: 62px;}
+  .footer-text h1{color: #dbdbdb;font-size: 1.5em;margin-top: 1em;}
+  p.foot-p{color: #777;}
+}
+
+
 .home-top{
   // background-color: #43cea2;
   // background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
@@ -256,6 +271,7 @@
   margin-top: 0px;border-radius: 0 0 12px 12px;
 
 }
+
 // Public Profile
 .public-profile-page{
   background: #f7f7f7;
@@ -269,6 +285,13 @@
       img{
         width: 180px;height: 180px;border-radius: 50%;
         object-fit: contain;border: 1px solid #efefef;
+      }
+      .social-icons-links{
+        li{
+          display: inline;
+          img{width: 38px;height: 38px;background: #890454; }
+          .fa{color: #890454;font-size:1.5em;padding: 8px;}
+        }
       }
       h1{color: #444;font-weight: 600;font-size: 1.2em;}
       h2{font-size: 13px;text-transform: uppercase;}
@@ -660,4 +683,15 @@
       }
     }
   }
+  .showcase-area{
+    margin: 0px !important;
+    .delete-button-box{
+      position: absolute;bottom: 0;right: 0;
+      input.delete-button{
+        padding: 8px 15px;border: 0px;cursor: pointer;background: #890454;color: #fff;
+        font-size: 15px;border-radius: 3px;
+      }
+    }
+  }
+
 }

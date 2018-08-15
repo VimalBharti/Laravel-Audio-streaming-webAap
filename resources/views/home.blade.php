@@ -254,7 +254,7 @@
 
   @include('pages.join-com')
 
-  <Myfooter></Myfooter>
+  @include('_partials.footer')
 
 
 @endsection
