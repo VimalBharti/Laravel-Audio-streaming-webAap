@@ -4,7 +4,7 @@
 
   <div class="showcase-homepage">
 
-    @include('_partials.snavbar')
+    @include('_partials.Snavbar')
 
     <section class="hero is-medium is-bold has-text-centered">
       <div class="hero-body">

@@ -4,7 +4,7 @@
 
   <div class="plain-footer-container showcase-page">
     <div class="menu-bar">
-      @include('_partials.snavbar')
+      @include('_partials.Snavbar')
     </div>
 
     <div class="with-plain-footer">
