@@ -289,6 +289,6 @@
 
   </div>
 
-
+<Myplainfooter></Myplainfooter>
 
 @endsection
