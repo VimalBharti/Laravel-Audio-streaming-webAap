@@ -1,0 +1,38 @@
+<nav class="navbar">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="{{route('home')}}">
+            <img src="{{asset('images/logo.png')}}" >
+          </a>
+            <span class="navbar-burger burger" data-target="navMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+      <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            @if (Auth::guest())
+              <a href="#" class="navbar-item is-active">Home</a>
+              <a href="#" class="navbar-item">About</a>
+              <a href="#" class="navbar-item">Contact</a>
+              <a href="{{route('login')}}" class="navbar-item">Login</a>
+            @else
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  {{ Auth::user()->name }}
+                </a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item" href="{{route('member.dashboard')}}">
+                    <i class="fa fa-th-large"></i> Dashboard
+                  </a>
+                  <a class="navbar-item" href="{{route('user.logout')}}">
+                    <i class="fa fa-sign-out"></i> Logout
+                  </a>
+                </div>
+              </div>
+            @endif
+          </div>
+      </div>
+    </div>
+  </nav>
