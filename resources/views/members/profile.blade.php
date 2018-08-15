@@ -17,7 +17,10 @@
             <img src="/avatar/{{$user->avatar}}">
             <h1>{{$user->name}}</h1>
             <h2>
-              {{$user->city}} {{$user->country_id->name}}
+              {{$user->city}}
+              @if(isset ($user->country_id))
+                {{$user->country->name}}
+              @endif
             </h2>
 
             <div class="column">
@@ -47,7 +50,13 @@
               </li>
               <li>
                 <span><i class="fa fa-globe"></i> Country:</span>
-                <strong class="is-pulled-right">{{$user->country_id->name}}</strong>
+                <strong class="is-pulled-right">
+                  @if(isset ($user->country_id))
+                    {{$user->country->name}}
+                  @else
+                    <p>Not mentioned</p>
+                  @endif
+                </strong>
               </li>
               <li>
                 <span><i class="fa fa-database"></i> Total Post:</span>
