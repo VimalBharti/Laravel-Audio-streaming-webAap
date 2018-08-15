@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;background: #f7f7f7;
     position: fixed;
-    top: 0;left: 0;z-index: 999;
+    top: 0;left: 0;bottom: 0;right: 0;z-index: 99999;
   }
   .preload-logo{
     width: 100%;margin:150px auto 50px auto;font-size: 50px;

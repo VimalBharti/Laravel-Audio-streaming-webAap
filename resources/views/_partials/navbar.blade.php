@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="{{route('home')}}">
+        <a class="navbar-item is-hidden-mobile" href="{{route('home')}}">
           <img src="{{asset('images/logo.png')}}" >
         </a>
         <span class="navbar-burger burger nav-toggle" data-target="navMenu">
@@ -116,7 +116,7 @@
                             </section>
                             <footer class="modal-card-foot">
                                 <button class="button">Login</button>
-                                <a href="{{url('/register')}}">Create New Account</a>
+                                <a href="{{url('/register')}}" class="new-acc-link">Create New Account</a>
                             </footer>
                         </div>
                     </form>

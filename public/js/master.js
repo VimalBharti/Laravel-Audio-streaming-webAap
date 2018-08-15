@@ -25,7 +25,8 @@ function myFramework(){
 // Preloader
 setTimeout(function() {
   $('#preload').fadeOut('slow');
-}, 1100);
+}, 1500);
+
 
 
 (function() {

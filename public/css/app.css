@@ -22495,6 +22495,15 @@ label.panel-block:hover {
   border: 0px;
 }
 
+.navbar .modal-card-foot a.new-acc-link {
+  color: #888;
+  font-size: 13px;
+}
+
+.navbar .modal-card-foot a.new-acc-link:hover {
+  color: #333;
+}
+
 .navbar .logout-btn {
   color: #777777;
 }
@@ -23459,6 +23468,10 @@ label.panel-block:hover {
 
   .home-post-list {
     padding: 0px;
+  }
+
+  .navbar-brand {
+    background: #fefefe;
   }
 
   .m-navbar-menu li {

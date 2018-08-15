@@ -13,7 +13,7 @@
         <div class="left-navbar-inner">
           <ul>
             <li class="main-logo">
-              <a href="#"><img src="{{asset('images/slogo.png')}}"></a>
+              <a href="{{route('showcase.dash')}}"><img src="{{asset('images/slogo.png')}}"></a>
             </li>
             <li>
               <a href="{{route('profiles.show', $user->username)}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
