@@ -45,7 +45,7 @@
               </li>
               <li>
                 <span><i class="fa fa-globe"></i> Country:</span>
-                <strong class="is-pulled-right">{{$user->country->name}}</strong>
+                <strong class="is-pulled-right"></strong>
               </li>
               <li>
                 <span><i class="fa fa-database"></i> Total Post:</span>
