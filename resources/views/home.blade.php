@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <!-- <Preloader></Preloader> -->
+  <Preloader></Preloader>
 
   @include('_partials.navbar')
 
