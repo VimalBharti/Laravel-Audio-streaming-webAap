@@ -18,11 +18,11 @@
     </div>
     <div class="a-links-footer is-hidden-mobile">
       <li><a href="{{url('/about')}}">About</a></li>
-      <li><a href="#">Help</a></li>
       <li><a href="{{route('contact')}}">Contact</a></li>
       <li><a href="{{url('/terms')}}">Terms</a></li>
       <li><a href="{{url('/guideline')}}">Guidelines</a></li>
       <li><a href="{{url('/privacy')}}">Privacy</a></li>
+      <li><a href="{{route('showcase.dash')}}">Showcase</a></li>
     </div>
     <!-- <div class="footer-text">
       <h1>Free Live, Free Learn, Free Give, Free Get </h1>
