@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Dashboard')
+
 @section('content')
 
   <div class="user-dashboard">
@@ -41,7 +43,7 @@
                             <div class="delete-post">
                               {!! Form::open(['route' => ['members.destroy', $post->id], 'method' => 'DELETE']) !!}
                                 {!! Form::submit('trash', ['class' => 'delete-button']) !!}
-                                {!! Form::close() !!}
+                              {!! Form::close() !!}
                             </div>
                           </div>
 

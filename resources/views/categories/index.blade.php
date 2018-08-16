@@ -1,6 +1,6 @@
-<div class="row">
-    <div class="md-12col">
-        <table class="table-bordered">
+
+    <div class="user" style="padding:2em;">
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
                 <tr>
                     <th>Category ID</th>
@@ -23,4 +23,3 @@
             </tbody>
         </table>
     </div>
-</div>

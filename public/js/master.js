@@ -22,11 +22,23 @@ function myFramework(){
   }
 }
 
+// Menu Show hidden
+$('html').click(function() {
+    $('#dropdown-menu-auth').hide();
+ })
+
+ $('.navbar-menu').click(function(e){
+     e.stopPropagation();
+ });
+
+$('#auth-name').click(function(e) {
+ $('#dropdown-menu-auth').toggle();
+});
+
 // Preloader
 setTimeout(function() {
   $('#preload').fadeOut('slow');
 }, 1500);
-
 
 
 (function() {

@@ -22481,6 +22481,7 @@ label.panel-block:hover {
 
 .main-footer img.foot-logo {
   width: 62px;
+  margin-bottom: 20px;
 }
 
 .main-footer .footer-text h1 {
@@ -22491,6 +22492,41 @@ label.panel-block:hover {
 
 .main-footer p.foot-p {
   color: #777;
+}
+
+.main-footer .social-icons-foot li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.main-footer .social-icons-foot li a:hover {
+  background-color: transparent;
+}
+
+.main-footer .a-links-footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main-footer .a-links-footer li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2px 8px;
+}
+
+.main-footer .a-links-footer li a {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 15px;
+}
+
+.main-footer .a-links-footer li a:hover {
+  text-decoration: underline;
+  color: #ddd;
 }
 
 .home-top {
@@ -22520,25 +22556,42 @@ label.panel-block:hover {
   color: #890454;
 }
 
-.navbar .modal-card-foot {
-  padding: 5px;
+.navbar a.auth-name {
+  position: relative;
+}
+
+.navbar .dropdown-menu-auth {
+  position: absolute;
+  top: 60px;
+  z-index: 99;
+  right: 0;
+  display: none;
+}
+
+.navbar .dropdown-menu-auth ul {
   background: #fff;
+  -webkit-box-shadow: 0px 0px 8px 2px #efefef;
+          box-shadow: 0px 0px 8px 2px #efefef;
+  padding: 0px;
 }
 
-.navbar .modal-card-foot button {
-  margin-top: 8px;
-  margin-left: 15px;
-  background-color: #890454;
-  color: #fff;
-  border: 0px;
+.navbar .dropdown-menu-auth ul li {
+  list-style: none;
+  padding: 12px;
 }
 
-.navbar .modal-card-foot a.new-acc-link {
+.navbar .dropdown-menu-auth ul li:hover {
+  background: #f7f7f7;
+}
+
+.navbar .dropdown-menu-auth ul li a {
   color: #888;
-  font-size: 13px;
+  padding: 12px;
+  width: 100%;
 }
 
-.navbar .modal-card-foot a.new-acc-link:hover {
+.navbar .dropdown-menu-auth ul li a:hover {
+  background: #f7f7f7;
   color: #333;
 }
 
@@ -23483,6 +23536,92 @@ label.panel-block:hover {
       -ms-flex: none;
           flex: none;
   border-radius: 3px;
+}
+
+.about-us-page {
+  padding: 4em;
+  text-align: center;
+  background-image: linear-gradient(135deg, #f97794 0%, #623aa2 100%);
+}
+
+.about-us-page h1 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.about-us-page-text {
+  padding: 3em;
+}
+
+.about-us-page-text h2 {
+  font-weight: 600;
+}
+
+.about-us-page-text p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.about-us-page-text .single {
+  margin-bottom: 2em;
+}
+
+.about-us-page-text .single h1 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.about-us-page-text .single p {
+  padding-left: 2em;
+  margin-top: 10px;
+}
+
+.about-us-page-text .single ul {
+  padding-left: 4em;
+}
+
+.about-us-page-text .single ul li {
+  list-style: disc;
+}
+
+.about-us-page-text ol {
+  padding-left: 1.5em;
+}
+
+.about-us-page-text ol li ul {
+  padding-left: 2em;
+}
+
+.about-us-page-text ol li ul li {
+  list-style: disc;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.admin-panel .admin-sidebar {
+  border: 1px solid #efefef;
+  height: 100vh;
+}
+
+.admin-panel .admin-sidebar li {
+  padding: 15px 8px;
+  list-style: none;
+}
+
+.admin-panel .admin-sidebar li:hover {
+  background: #efefef;
+}
+
+.admin-panel .admin-sidebar li a {
+  color: #666;
+  padding: 15px 8px;
+}
+
+.admin-panel .admin-sidebar li a:hover {
+  background: #efefef;
 }
 
 @media (min-width: 320px) and (max-width: 479px) {

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Free showcase')
+
 @section('content')
 
   <div class="showcase-homepage">

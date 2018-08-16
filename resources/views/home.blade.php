@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
+@section('title', 'Bybu')
+
 @section('content')
 
-  <Preloader></Preloader>
+  <!-- <Preloader></Preloader> -->
 
   @include('_partials.navbar')
 

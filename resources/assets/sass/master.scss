@@ -55,9 +55,27 @@
 }
 .main-footer{
   background-color: #171727;padding-top: 6em;
-  img.foot-logo{width: 62px;}
+  img.foot-logo{width: 62px;margin-bottom: 20px;}
   .footer-text h1{color: #dbdbdb;font-size: 1.5em;margin-top: 1em;}
   p.foot-p{color: #777;}
+  .social-icons-foot{
+    li{
+      list-style: none;display: inline-flex;
+      a{
+        &:hover{background-color: transparent}
+      }
+    }
+  }
+  .a-links-footer{
+    margin-top: 10px;margin-bottom: 10px;
+    li{
+      list-style: none;display: inline-flex;padding: 2px 8px;
+      a{
+        text-transform: uppercase;color: #666;font-size: 15px;
+        &:hover{text-decoration: underline;color: #ddd;}
+      }
+    }
+  }
 }
 
 
@@ -77,15 +95,29 @@
     background-color: transparent;
     color: #890454;
   }
+  a.auth-name{position: relative;}
+  .dropdown-menu-auth{
+    position: absolute;top: 60px;z-index: 99;right: 0;display: none;
+    ul{
+      background: #fff;box-shadow: 0px 0px 8px 2px #efefef;
+      padding: 0px;
 
-  .modal-card-foot{
-    padding: 5px;background: #fff;
-    button{margin-top: 8px;margin-left: 15px;background-color:#890454;color:#fff;border: 0px;}
-    a.new-acc-link{
-      color: #888;font-size: 13px;
-      &:hover{color: #333;}
+      li{
+        list-style: none;padding: 12px;
+        &:hover{
+          background: #f7f7f7;
+        }
+        a{
+          color: #888;padding: 12px;width: 100%;
+          &:hover{
+            background: #f7f7f7;color: #333;
+          }
+        }
+
+      }
     }
   }
+
   .logout-btn{
     color: #777777;
     &:hover{color: #890454;}
@@ -643,6 +675,51 @@
       height: 400px;
       overflow: hidden;
       img{flex: none;border-radius: 3px;}
+    }
+  }
+}
+
+// About us Page
+.about-us-page{
+  padding: 4em;text-align: center;
+  background-image: linear-gradient( 135deg, rgb(249, 119, 148) 0%, rgb(98, 58, 162) 100%);
+  h1{color: #fff;font-size: 3em;font-weight: bold;}
+}
+.about-us-page-text{
+  padding: 3em;
+  h2{font-weight: 600;}
+  p{
+    font-size: 1.1em;line-height: 1.5em;margin-bottom: 18px;text-align: justify;
+  }
+  .single{
+    margin-bottom: 2em;
+    h1{font-size: 1.4em;margin-bottom: 10px;}
+    p{padding-left: 2em;margin-top: 10px;}
+    ul{padding-left: 4em;li{list-style: disc;}}
+  }
+  ol{
+    padding-left: 1.5em;
+    li{
+      ul{
+        padding-left: 2em;
+        li{list-style: disc;text-align: justify;line-height: 1.5em;}
+      }
+    }
+  }
+}
+
+
+// Admin Dashboard
+.admin-panel{
+  .admin-sidebar{
+    border: 1px solid #efefef;height: 100vh;
+    li{
+      padding:15px 8px;list-style: none;
+      &:hover{background: #efefef;}
+      a{
+        color: #666;padding:15px 8px;
+        &:hover{background: #efefef;}
+      }
     }
   }
 }

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bybu - Freebies PSD + Templates + Designs and other Free Stuff</title>
+    <!-- <title>Bybu - Freebies PSD + Templates + Designs and other Free Stuff</title> -->
+    <title>@yield('title') - Bybu Freebies | PSD + Templates + Designs and other Free Stuff</title>
     <meta name="description" content="Download Free and Exclusive PSD Files with HTML and CSS Code. Free Showcase your design -  free for lifetime. A collection of free high quality website templates designed with Photoshop. Bybu.cc - freebies ">
     <meta name="robots" content="index, follow" />
     <!-- CSRF Token -->
@@ -19,7 +20,6 @@
 
       gtag('config', 'UA-123989535-1');
     </script>
-
 
 </head>
 <body>

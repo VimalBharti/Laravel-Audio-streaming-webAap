@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
+use App\User;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -49,4 +51,7 @@ class LoginController extends Controller
         }
         return $this->redirectTo ?? '/';
     }
+
+
+    
 }

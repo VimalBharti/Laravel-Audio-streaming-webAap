@@ -53,7 +53,7 @@ class UserController extends Controller
         ['user_id', Auth::id()],
         ['category_id', '3']
       ])->get();
-      
+
       return view('members.dashboard', compact('user', 'posts', 'category', 'headers', 'footers', 'templates'));
   }
 
@@ -79,6 +79,15 @@ class UserController extends Controller
       ])->get();
 
       return view('members.publicProfile',  compact('user', 'post', 'follower', 'countries', 'category', 'posts', 'headers', 'footers', 'templates') );
+  }
+
+  public function destroy($id)
+  {
+    $users = User::findOrFail($id);
+
+    $users->delete();
+
+    return redirect()->back();
   }
 
 

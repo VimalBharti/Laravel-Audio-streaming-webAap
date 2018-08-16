@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Post new freebie')
+
 @section('content')
 
   <div class="user-dashboard">

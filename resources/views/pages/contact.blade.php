@@ -1,13 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title', 'Contact Us')
 
-  <!-- <Preloader></Preloader>
-  <script type="text/javascript">
-    setTimeout(function() {
-      $('#preload').fadeOut('slow');
-    }, 1100);
-  </script> -->
+@section('content')
 
   <div class="menu-bar">
     @include('_partials.navbar')
@@ -74,7 +69,5 @@
       {!! Form::close() !!}
     </div>
   </section>
-
-  <Myfooter></Myfooter>
 
 @endsection

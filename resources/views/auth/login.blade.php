@@ -67,7 +67,7 @@
                   Login
                 </button>
               </p>
-              <p class="has-text-grey">
+              <p class="has-text-grey is-clearfix">
                 <span class="is-pulled-left">
                   <a class="log-link" href="{{route('register')}}">Don't have an account ?</a>
                 </span>

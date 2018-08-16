@@ -24,6 +24,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::resource('showcase/me', 'ShowcaseController');
 });
 
+// Pgaes
+Route::get('/about', 'HomeController@about');
+Route::get('/terms', 'HomeController@terms');
+Route::get('/privacy', 'HomeController@privacy');
+Route::get('/guideline', 'HomeController@guideline');
+
 Route::get('/contact-us', 'HomeController@contact')->name('contact');
 Route::post('/contact-us', ['as'=>'contactus.store','uses'=>'HomeController@contactUSPost']);
 
@@ -65,5 +71,8 @@ Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/allmembers', 'AdminController@members')->name('admin.allmembers');
+    Route::get('/allposts', 'AdminController@posts')->name('admin.allpost');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+    Route::delete('user/{id}', 'UserController@destroy')->name('user.destroy');
 });
