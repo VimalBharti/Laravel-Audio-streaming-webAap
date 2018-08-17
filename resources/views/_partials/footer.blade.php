@@ -7,12 +7,12 @@
     <div class="social-icons-foot">
       <li>
         <a class="navbar-item" href="https://www.facebook.com/bybu.cc" target="_blank">
-          <img src="{{asset('images/icons/twitter.png')}}">
+          <img src="{{asset('images/icons/facebook.png')}}">
         </a>
       </li>
       <li>
         <a class="navbar-item" href="https://twitter.com/Bybu_cc" target="_blank">
-          <img src="{{asset('images/icons/behance.png')}}">
+          <img src="{{asset('images/icons/twitter.png')}}">
         </a>
       </li>
     </div>

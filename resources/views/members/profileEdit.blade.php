@@ -31,8 +31,8 @@
 
             <div class="left-sidebar-bottom">
               <h1>@</h1>
-              <h3>pitara.club/{{$user->username}}</h3>
-              <p>your pitara bucket</p>
+              <h3>bybu.cc/{{$user->username}}</h3>
+              <p>your bybu bucket</p>
             </div>
 
           </div>
