@@ -5,7 +5,7 @@
 @section('content')
 
   <div class="menu-bar">
-    @include('_partials.navbar')
+
   </div>
 
   <div class="single-design-page">
