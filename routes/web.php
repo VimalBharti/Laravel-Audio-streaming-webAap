@@ -40,8 +40,6 @@ Route::get('/all-templates', 'HomeController@template')->name('all-template');
 
 Route::get('showcase', 'ShowcaseController@dashboard')->name('showcase.dash');
 
-// Single Post
-Route::get('design/{uid}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('uid', '[\w\d\-\_]+');
 
 // ProfileController
 Route::resource('members/profiles', 'ProfileController');
@@ -57,7 +55,6 @@ Route::resource('categories', 'CategoryController');
 
 Auth::routes();
 
-
 Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::get('profile/{username}', 'UserController@publicProfile')->name('public.profile')->where('username', '[\w\d\-\_]+');
@@ -65,6 +62,9 @@ Route::get('profile/{username}', 'UserController@publicProfile')->name('public.p
 
 // Single Showcase
 Route::get('/{slug}', 'ShowcaseController@getSingle')->name('showcase.single');
+
+// Single Post
+Route::get('design/{uid}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('uid', '[\w\d\-\_]+');
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
