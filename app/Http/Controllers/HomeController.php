@@ -24,17 +24,15 @@ class HomeController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->paginate(11);
         // $posts = Post::all();
 
-        $headers = Post::where([
-          ['category_id', '1']
-        ])->get();
-        $footers = Post::where([
+
+        $misc = Post::where([
           ['category_id', '2']
         ])->get();
         $templates = Post::where([
           ['category_id', '3']
         ])->get();
 
-        return view('home', compact('user', 'category', 'posts', 'headers', 'footers', 'templates'));
+        return view('home', compact('user', 'category', 'posts', 'misc', 'templates'));
     }
 
     public function contact(){
@@ -62,15 +60,7 @@ class HomeController extends Controller
       return view('examples.all', compact('user', 'category', 'posts'));
     }
 
-    public function header(Request $request){
-
-      $user = Auth::user();
-      $category = Category::all();
-      $posts = Post::where('category_id', '1')->paginate(24);
-
-      return view('examples.all', compact('user', 'category', 'posts'));
-    }
-    public function footer(Request $request){
+    public function misc(Request $request){
 
       $user = Auth::user();
       $category = Category::all();

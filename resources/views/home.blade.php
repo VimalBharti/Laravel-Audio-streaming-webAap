@@ -76,10 +76,10 @@
             </div>
           </b-tab-item>
 
-<!-- Header -->
-          <b-tab-item label="Header">
+<!-- other -->
+          <b-tab-item label="Misc">
             <div class="columns is-multiline home-post-list">
-              @foreach ($headers as $post)
+              @foreach ($misc as $post)
                 <div class="column is-one-quarter single-post">
                   <div class="card">
                     <div class="card-image">
@@ -128,65 +128,7 @@
               @endforeach
               <div class="column is-one-quarter single-post">
                 <section class="view-more">
-                  <a href="{{route('all-header')}}">VIEW MORE</a>
-                </section>
-              </div>
-            </div>
-          </b-tab-item>
-
-<!-- Footer -->
-          <b-tab-item label="Footer">
-            <div class="columns is-multiline home-post-list">
-              @foreach ($footers as $post)
-                <div class="column is-one-quarter single-post">
-                  <div class="card">
-                    <div class="card-image">
-                      <figure class="image is-4by3">
-                        <a href="{{route('post.show', $post->uid)}}" target="_blank">
-                          <img src="/uploads/design/{{ $post->image }}" class="thumb">
-                        </a>
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="user-small-image">
-                          <figure class="image is-24x24 user-image">
-                            <img src="/avatar/{{$post->user_image}}" class="is-rounded">
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <a href="/profile/{{$post->user_slug}}" target="_blank">
-                            <p class="title is-5">{{$post->user_name}}</p>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div class="content">
-                        @if(isset($post->psd))
-                          <a class="button is-primary is-outlined">PSD</a>
-                        @else
-                          <a class="button is-static">PSD</a>
-                        @endif
-                        @if(isset($post->code))
-                          <a class="button is-primary is-outlined">{{$post->framework}}</a>
-                        @else
-                          <a class="button is-static">HTML</a>
-                        @endif
-                        @if(isset($post->css))
-                          <a class="button is-primary is-outlined">CSS</a>
-                        @else
-                          <a class="button is-static">CSS</a>
-                        @endif
-
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              @endforeach
-              <div class="column is-one-quarter single-post">
-                <section class="view-more">
-                  <a href="{{route('all-footer')}}">VIEW MORE</a>
+                  <a href="{{route('all-misc')}}">VIEW MORE</a>
                 </section>
               </div>
             </div>

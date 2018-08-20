@@ -64,6 +64,8 @@ class PostController extends Controller
       $post = new Post;
 
       $post->uid = 'B' . $date . 'b' . $rand;
+      $post->credit  = $request->credit;
+      $post->url  = $request->url;
       $post->css  = $request->css;
       $post->markup = $request->markup;
       $post->framework = $request->framework;

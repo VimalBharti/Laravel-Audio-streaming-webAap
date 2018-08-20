@@ -42,7 +42,7 @@ class ShowcaseController extends Controller
     public function store(Request $request)
     {
       $rules = [
-          'image' => 'required|mimes:jpeg,bmp,png|max:10000'
+          'image' => 'required|mimes:jpeg,bmp,png|max:5000'
       ];
 
       $this->validate($request, $rules);

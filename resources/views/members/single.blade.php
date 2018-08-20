@@ -5,7 +5,7 @@
   <div class="menu-bar">
     @include('_partials.navbar')
   </div>
-  
+
   <div class="single-design-page">
 
 
@@ -53,6 +53,11 @@
         <p><i class="fa fa-edit"></i> Submitted By:
           <strong><a href="/profile/{{$single->user_slug}}">{{$single->user_name}}</a></strong>
         </p>
+        @if(isset($single->credit))
+        <p><i class="fa fa-edit"></i> Design By:
+          <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
+        </p>
+        @endif
       </div>
 
     </div>

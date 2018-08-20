@@ -35,8 +35,7 @@ Route::post('/contact-us', ['as'=>'contactus.store','uses'=>'HomeController@cont
 
 // all posts
 Route::get('/all-designs', 'HomeController@all')->name('all-post');
-Route::get('/all-headers', 'HomeController@header')->name('all-header');
-Route::get('/all-footers', 'HomeController@footer')->name('all-footer');
+Route::get('/all-misc', 'HomeController@misc')->name('all-misc');
 Route::get('/all-templates', 'HomeController@template')->name('all-template');
 
 Route::get('showcase', 'ShowcaseController@dashboard')->name('showcase.dash');

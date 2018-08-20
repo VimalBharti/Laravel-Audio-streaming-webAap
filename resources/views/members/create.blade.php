@@ -45,6 +45,16 @@
                   </div>
                 </div>
               </div>
+              <!-- Credit -->
+              <label class="label">Give Credit to Designer (optional)</label>
+              <div class="field is-grouped">
+                <div class="control">
+                  <input class="input is-medium" type="text" placeholder="Designer name" name="credit">
+                </div>
+                <div class="control is-expanded">
+                  <input class="input is-medium" type="text" placeholder="Profile URL" name="url">
+                </div>
+              </div>
               <!-- PSD -->
               <div class="field">
                 <label class="label">Upload PSD if available:</label>
@@ -113,6 +123,12 @@
             <ul>
               <li>Maximum Image Size: 2MB</li>
               <li>Image Extension: JPEG | PNG</li>
+            </ul>
+
+            <h4>Credit</h4>
+            <ul>
+              <li>Mention designer name if you use his/her design.</li>
+              <li>with his/her social account url; (behance, dribbble, etc)</li>
             </ul>
 
             <h4>PSD</h4>
