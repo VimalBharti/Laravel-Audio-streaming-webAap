@@ -1421,11 +1421,6 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     Preloader: Preloader
   }
 });
-vm.message = 'new message'; // change data
-vm.$el.textContent === 'new message'; // false
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.nextTick(function () {
-  vm.$el.textContent === 'new message'; // true
-});
 
 /***/ }),
 /* 14 */

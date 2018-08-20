@@ -22,8 +22,3 @@ const app = new Vue({
       Preloader
     }
 });
-app.message = 'new message' // change data
-app.$el.textContent === 'new message' // false
-Vue.nextTick(function () {
-  app.$el.textContent === 'new message' // true
-});

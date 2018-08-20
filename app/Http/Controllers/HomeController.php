@@ -17,22 +17,15 @@ use Auth;
 class HomeController extends Controller
 {
 
-    public function index()
+    protected $posts;
+
+    public function index(Request $request)
     {
         $user = Auth::user();
         $category = Category::all();
-        $posts = Post::orderBy('created_at', 'desc')->paginate(11);
-        // $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->paginate(24);
 
-
-        $misc = Post::where([
-          ['category_id', '2']
-        ])->get();
-        $templates = Post::where([
-          ['category_id', '3']
-        ])->get();
-
-        return view('home', compact('user', 'category', 'posts', 'misc', 'templates'));
+        return view('home', compact('user', 'category', 'posts'));
     }
 
     public function contact(){

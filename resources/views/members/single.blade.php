@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Free')
+
 @section('content')
 
   <div class="menu-bar">
