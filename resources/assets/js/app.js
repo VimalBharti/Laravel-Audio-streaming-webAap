@@ -15,11 +15,15 @@ let Preloader = require('./components/Preloader.vue');
 const app = new Vue({
     el: '#app',
     data: {
-      message: ''
+      message: 'bybu'
     },
     components:{
       userdashboardSidebar,
       Preloader
     }
-
+});
+vm.message = 'new message' // change data
+vm.$el.textContent === 'new message' // false
+Vue.nextTick(function () {
+  vm.$el.textContent === 'new message' // true
 });
