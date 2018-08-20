@@ -66,6 +66,14 @@
 
   </div>
 
-<Myplainfooter></Myplainfooter>
+    @include('pages.join-com')
 
-@endsection
+    @include('_partials.footer')
+
+  @stop
+
+  @section('scripts')
+  <script type="text/javascript">
+
+  </script>
+  @stop
