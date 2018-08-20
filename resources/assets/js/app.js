@@ -15,5 +15,5 @@ let Preloader = require('./components/Preloader.vue');
 const app = new Vue({
     el: '#app',
 
-    components:{Myhero, userdashboardSidebar, Preloader}
+    components:{userdashboardSidebar, Preloader}
 });
