@@ -11,7 +11,6 @@ Vue.use(VueAnalytics, {
 import Buefy from 'buefy'
 Vue.use(Buefy);
 
-let Myhero = require('./components/Myhero.vue');
 let userdashboardSidebar = require('./components/userdashboardSidebar.vue');
 let Preloader = require('./components/Preloader.vue');
 
