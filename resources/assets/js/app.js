@@ -14,6 +14,12 @@ let Preloader = require('./components/Preloader.vue');
 
 const app = new Vue({
     el: '#app',
+    data: {
+      message: ''
+    },
+    components:{
+      userdashboardSidebar,
+      Preloader
+    }
 
-    components:{userdashboardSidebar, Preloader}
 });
