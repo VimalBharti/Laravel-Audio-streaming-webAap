@@ -54,23 +54,15 @@
 </pre>
           </div>
           <div data-content="3" class="tab-item">
-            @if(isset($single->psd))
-                <div class="download-psd has-text-centered">
-                    <h2 class="down-ps">Download PSD file</h2>
-                    <p>Free for personel use</p>
-                    <a href="{{ URL::to('/uploads/psd/' . $single->psd) }}" download="{{$single->psd}}">
-                        <img src="{{asset('images/psd-down.png')}}">
-                    </a>
-                </div>
-            @else
-                <h3 class="not-avail">PSD not available!</h3>
-            @endif
+            
           </div>
         </div>
       </section>
 
       <div class="content posted-by-single-page">
-        
+        <p><i class="fa fa-edit"></i> Submitted By:
+          <strong><a href="/profile/{{$single->user_slug}}">{{$single->user_name}}</a></strong>
+        </p>
         @if(isset($single->credit))
         <p><i class="fa fa-edit"></i> Design By:
           <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
