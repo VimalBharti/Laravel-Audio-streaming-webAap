@@ -41,16 +41,12 @@
         <div id="tab-content">
           <div class="is-active tab-item" data-content="1">
 
-<code class="language-html" data-lang="html">
 {{$single->markup}}
-</code>
 
           </div>
           <div data-content="2" class="tab-item">
 
-<code class="language-html" data-lang="css">
 {{$single->css}}
-</code>
 
           </div>
           <div data-content="3" class="tab-item">
