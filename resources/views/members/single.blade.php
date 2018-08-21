@@ -70,9 +70,7 @@
       </section>
 
       <div class="content posted-by-single-page">
-        <p><i class="fa fa-edit"></i> Submitted By:
-          <strong><a href="/profile/{{$single->user_slug}}">{{$single->user_name}}</a></strong>
-        </p>
+        
         @if(isset($single->credit))
         <p><i class="fa fa-edit"></i> Design By:
           <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
