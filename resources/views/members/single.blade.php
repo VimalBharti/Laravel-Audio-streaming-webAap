@@ -16,57 +16,38 @@
       </div>
 
       <section>
-        <div class="tabs is-boxed is-fullwidth" id="tabs">
-          <ul>
-            <li class="is-active" data-tab="1">
-              <a>
-                <span class="icon is-small"><i class="fas fa fa-code" aria-hidden="true"></i></span>
-                <span>CODE</span>
-              </a>
-            </li>
-            <li data-tab="2">
-              <a>
-                <span class="icon is-small"><i class="fas fa fa-css3" aria-hidden="true"></i></span>
-                <span>CSS</span>
-              </a>
-            </li>
-            <li data-tab="3">
-              <a>
-                <span class="icon is-small"><i class="fas fa fa-picture-o" aria-hidden="true"></i></span>
-                <span>PSD</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="tab-content">
-          <div class="is-active tab-item" data-content="1">
+        <b-tabs type="is-boxed" position="is-centered" size="is-medium" expanded>
+            <b-tab-item label="CODE" icon="fas fa fa-code">
 <pre>
 <code class="language-html" data-lang="html">
-hello markup
+hh
 </code>
 </pre>
-          </div>
-          <div data-content="2" class="tab-item">
+            </b-tab-item>
+
+            <b-tab-item label="CSS" icon="fas fa fa-css3">
 <pre>
 <code class="language-html" data-lang="css">
 {{$single->css}}
 </code>
 </pre>
-          </div>
-          <div data-content="3" class="tab-item">
-            @if(isset($single->psd))
-                <div class="download-psd has-text-centered">
-                    <h2 class="down-ps">Download PSD file</h2>
-                    <p>Free for personel use</p>
-                    <a href="{{ URL::to('/uploads/psd/' . $single->psd) }}" download="{{$single->psd}}">
-                        <img src="{{asset('images/psd-down.png')}}">
-                    </a>
-                </div>
-            @else
-                <h3 class="not-avail">PSD not available!</h3>
-            @endif
-          </div>
-        </div>
+            </b-tab-item>
+
+            <b-tab-item label="PSD" icon="fas fa fa-picture-o">
+              @if(isset($single->psd))
+                  <div class="download-psd has-text-centered">
+                      <h2 class="down-ps">Download PSD file</h2>
+                      <p>Free for personel use</p>
+                      <a href="{{ URL::to('/uploads/psd/' . $single->psd) }}" download="{{$single->psd}}">
+                          <img src="{{asset('images/psd-down.png')}}">
+                      </a>
+                  </div>
+              @else
+                  <h3 class="not-avail">PSD not available!</h3>
+              @endif
+            </b-tab-item>
+
+        </b-tabs>
       </section>
 
       <div class="content posted-by-single-page">
@@ -93,16 +74,6 @@ hello markup
 
   @section('scripts')
   <script type="text/javascript">
-    $(document).ready(function() {
-      $('#tabs li').on('click', function() {
-        var tab = $(this).data('tab');
 
-        $('#tabs li').removeClass('is-active');
-        $(this).addClass('is-active');
-
-        $('#tab-content .tab-item').removeClass('is-active');
-        $('.tab-item[data-content="' + tab + '"]').addClass('is-active');
-      });
-    });
   </script>
   @stop
