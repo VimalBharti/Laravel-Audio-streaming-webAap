@@ -20,7 +20,7 @@
             <b-tab-item label="CODE" icon="fas fa fa-code">
 <pre>
 <code class="language-html" data-lang="html">
-{{ $single->markup }}
+{{ $single->coding }}
 </code>
 </pre>
             </b-tab-item>

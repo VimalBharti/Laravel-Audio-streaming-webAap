@@ -51,9 +51,9 @@ class PostController extends Controller
       // validate the data
       $rules = [
           'image' => 'required|mimes:jpeg,bmp,png|max:2000',
-          'psd' => 'required_without_all:css,markup|file|mimes:psd|max:6000',
+          'psd' => 'required_without_all:css,coding|file|mimes:psd|max:6000',
           'css' => 'required_without_all:psd',
-          'markup'=> 'required_without_all:psd',
+          'coding'=> 'required_without_all:psd',
       ];
 
       $this->validate($request, $rules);
@@ -67,7 +67,7 @@ class PostController extends Controller
       $post->credit  = $request->credit;
       $post->url  = $request->url;
       $post->css  = $request->css;
-      $post->markup = $request->markup;
+      $post->coding = $request->coding;
       $post->framework = $request->framework;
       $post->category_id = $request->category;
       $post->user_name = Auth::user()->name;

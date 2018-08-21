@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('framework')->nullable()->default('html');
             $table->string('psd')->nullable();
             $table->text('css')->nullable();
-            $table->text('markup')->nullable();
+            $table->text('coding')->nullable();
             $table->integer('category_id')->nullable()->unsigned();
             $table->string('user_name');
             $table->string('user_slug');

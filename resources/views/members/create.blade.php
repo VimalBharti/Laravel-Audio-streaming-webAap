@@ -92,7 +92,7 @@
               <div class="field">
                 <label class="label">Paste Markup : </label>
                 <div class="control">
-                  <textarea class="textarea" name="markup" placeholder="Markup Code" rows="10"></textarea>
+                  <textarea class="textarea" name="coding" placeholder="Markup Code" rows="10"></textarea>
                 </div>
               </div>
 

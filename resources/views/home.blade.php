@@ -58,11 +58,13 @@
                     @else
                       <a class="button is-static">PSD</a>
                     @endif
-                    @if(isset($post->markup))
+
+                    @if(isset($post->coding))
                       <a class="button is-primary is-outlined">{{$post->framework}}</a>
                     @else
                       <a class="button is-static">HTML</a>
                     @endif
+                    
                     @if(isset($post->css))
                       <a class="button is-primary is-outlined">CSS</a>
                     @else
