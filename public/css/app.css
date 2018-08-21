@@ -22851,6 +22851,14 @@ label.panel-block:hover {
   border-top: 4px solid #00C4A7;
 }
 
+.single-design-page #tab-content .tab-item {
+  display: none;
+}
+
+.single-design-page #tab-content .tab-item.is-active {
+  display: block;
+}
+
 .single-design-page section.tab-content {
   padding: 0px;
 }

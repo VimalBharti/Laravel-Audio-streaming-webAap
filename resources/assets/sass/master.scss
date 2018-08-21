@@ -271,6 +271,12 @@
       a{color: #333333;border-top: 4px solid #00C4A7;}
     }
   }
+  #tab-content .tab-item {
+    display: none;
+  }
+  #tab-content .tab-item.is-active {
+    display: block;
+  }
   section.tab-content{padding: 0px;}
   pre{
     max-height: 500px;overflow: auto;white-space: pre-wrap;
