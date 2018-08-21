@@ -40,18 +40,18 @@
         </div>
         <div id="tab-content">
           <div class="is-active tab-item" data-content="1">
-<pre>
 
+<code class="language-html" data-lang="html">
 {{$single->markup}}
+</code>
 
-</pre>
           </div>
           <div data-content="2" class="tab-item">
-<pre>
 
+<code class="language-html" data-lang="css">
 {{$single->css}}
+</code>
 
-</pre>
           </div>
           <div data-content="3" class="tab-item">
             @if(isset($single->psd))
