@@ -40,21 +40,23 @@
         </div>
         <div id="tab-content">
           <div class="is-active tab-item" data-content="1">
-<pre>
-<code class="language-html" data-lang="html">
-{{$single->markup}}
-</code>
-</pre>
+
           </div>
           <div data-content="2" class="tab-item">
-<pre>
-<code class="language-html" data-lang="css">
-{{$single->css}}
-</code>
-</pre>
+
           </div>
           <div data-content="3" class="tab-item">
-            
+            @if(isset($single->psd))
+                <div class="download-psd has-text-centered">
+                    <h2 class="down-ps">Download PSD file</h2>
+                    <p>Free for personel use</p>
+                    <a href="{{ URL::to('/uploads/psd/' . $single->psd) }}" download="{{$single->psd}}">
+                        <img src="{{asset('images/psd-down.png')}}">
+                    </a>
+                </div>
+            @else
+                <h3 class="not-avail">PSD not available!</h3>
+            @endif
           </div>
         </div>
       </section>
