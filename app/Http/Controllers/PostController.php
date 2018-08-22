@@ -110,11 +110,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($uid)
+    public function show($slug)
     {
       $user = Auth::user();
       $tags = Tag::all();
-      $single = Post::where('uid', '=', $uid)->first();
+      $single = Post::where('slug', '=', $slug)->first();
       return view('members.single', compact('single', 'user', 'tags'));
     }
 

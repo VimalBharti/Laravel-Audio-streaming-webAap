@@ -72,7 +72,7 @@ Route::get('profile/{username}', 'UserController@publicProfile')->name('public.p
 Route::get('/{slug}', 'ShowcaseController@getSingle')->name('showcase.single');
 
 // Single Post
-Route::get('design/{uid}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('uid', '[\w\d\-\_]+');
+Route::get('design/{slug}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('slug', '[\w\d\-\_]+');
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
