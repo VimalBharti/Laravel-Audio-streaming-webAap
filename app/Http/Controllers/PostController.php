@@ -60,12 +60,9 @@ class PostController extends Controller
 
       $this->validate($request, $rules);
 
-      $date   = date('yj');
-      $rand = rand(1, 99999);
-
       $post = new Post;
 
-      $post->uid = 'B' . $date . 'b' . $rand;
+      $post->title = $request->title;
       $post->credit  = $request->credit;
       $post->url  = $request->url;
       $post->css  = $request->css;

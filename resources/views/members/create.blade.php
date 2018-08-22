@@ -26,6 +26,14 @@
             {!! Form::open(array('route' => 'members.store', 'id' => 'post-form', 'enctype' => 'multipart/form-data', 'files' => true)) !!}
               {{ csrf_field() }}
 
+              <!-- Title -->
+              <div class="field">
+                <label class="label">Title : </label>
+                <div class="control">
+                  <input class="input is-medium" type="text" placeholder="Enter title" name="title">
+                </div>
+              </div>
+              <!-- Category -->
               <div class="field">
                 <label class="label">Select Category</label>
                 <div class="control">

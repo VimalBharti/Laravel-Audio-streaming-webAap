@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Post extends Model
 {
   protected $table = 'posts';
+  use Sluggable;
 
   public function category() {
       return $this->belongsTo('App\Category');
@@ -21,4 +23,15 @@ class Post extends Model
   public function tags(){
     return $this->belongsToMany('App\Tag');
   }
+
+  public function sluggable()
+  {
+      return [
+          'slug' => [
+              'source' => 'title',
+              'separator' => '-'
+          ]
+      ];
+  }
+
 }
