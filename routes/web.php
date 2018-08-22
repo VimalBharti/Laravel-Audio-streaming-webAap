@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::any('/result', 'HomeController@search');
+
 // Members Dashbaord
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'UserController@dashboard')->name('member.dashboard');
@@ -23,6 +25,11 @@ Route::group(['middleware' => 'auth'], function(){
     // Showcase
     Route::resource('showcase/me', 'ShowcaseController');
 });
+// Search bar in home page
+Route::get('/search', [
+    'as' => 'api.search',
+    'uses' => 'Api\SearchController@search'
+]);
 
 // Pgaes
 Route::get('/about', 'HomeController@about');
@@ -52,6 +59,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 // Categories
 Route::resource('categories', 'CategoryController');
+Route::resource('tags', 'TagController');
 
 Auth::routes();
 

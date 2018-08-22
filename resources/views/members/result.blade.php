@@ -1,57 +1,21 @@
 @extends('layouts.app')
 
-@section('title', 'Bybu')
+@section('title', 'Free')
 
 @section('content')
 
-  <!-- <Preloader></Preloader> -->
+<div class="plain-footer-container public-profile-page">
 
-  @include('_partials.navbar')
-
-  <div class="home-top column is-12">
-    <section class="hero is-bold has-text-centered is-vertical-center">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-size-4-mobile">
-            Discover &amp; Download
-          </h1>
-          <img src="{{asset('images/t-logo.png')}}" alt="">
-        </div>
-        <div class="container">
-          <div class="search-bar-hero column is-6 is-offset-3">
-            <form action="result" method="post" role="search">
-              {{ csrf_field() }}
-              <div class="field has-addons">
-                <div class="control is-expanded">
-                  <input class="input is-medium" type="text" placeholder="Search...." name="search">
-                </div>
-                <div class="control">
-                  <button class="button is-medium">
-                    Search
-                  </button>
-                </div>
-              </div>
-            </form>
-            <h2 class="subtitle">
-              Free Live . Free Learn . Free Give . Free Get
-            </h2>
-            <div class="error-box has-text-centered" id="no-result">
-              @if (session('error'))
-                  <p>{{ session('error') }}</p>
-              @endif
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="menu-bar">
+    @include('_partials.navbar')
   </div>
 
   <div class="container is-fluid">
     <section id="infinite-scroll">
       <div class="columns is-multiline home-post-list">
-        @if (count($posts) > 0)
-          @foreach ($posts as $post)
-            <div class="column is-one-quarter single-post">
+        @if (isset($data))
+          @foreach ($data as $post)
+            <div class="column is-3 single-post">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -106,6 +70,7 @@
       </div>
     </section>
   </div>
+</div>
 
   @include('pages.join-com')
 
@@ -114,7 +79,7 @@
 @stop
 
 @section('scripts')
-<script type="text/javascript">
-  $("#no-result").delay(2500).fadeOut(300);
-</script>
+  <script type="text/javascript">
+
+  </script>
 @stop

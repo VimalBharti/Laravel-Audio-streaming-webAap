@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Tag;
 use App\Post;
 use App\Category;
 
@@ -22,7 +23,8 @@ class AdminController extends Controller
     public function index(){
         $users = User::all();
         $categories = Category::all();
-        return view('admins.dashboard', compact('users', 'categories'));
+        $tags = Tag::all();
+        return view('admins.dashboard', compact('users', 'categories','tags'));
     }
 
     public function members() {

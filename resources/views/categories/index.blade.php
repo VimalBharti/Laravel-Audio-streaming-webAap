@@ -22,4 +22,14 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="">
+            <h2 class="is-size-4 heading"  style="margin-bottom:1em;font-weight:bold;">Add new category</h2>
+
+            {!! Form::open(['route' => 'categories.store', 'method' => 'POST']) !!}
+                {{ Form::label('name', 'Category Name:') }} <br>
+                {{ Form::text('name', null, ['style' => 'font-size:1.6em;']) }}
+
+                {{ Form::submit('Add Category', ['class' => 'button is-primary', 'style' => 'height:37px;width:150px;']) }}
+            {!! Form::close() !!}
+        </div>
     </div>

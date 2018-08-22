@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use App\Tag;
 use App\Like;
 use App\ContactUs;
 use App\Category;
@@ -13,6 +14,7 @@ use Session;
 use File;
 use Mail;
 use Auth;
+use DB;
 
 class HomeController extends Controller
 {
@@ -26,6 +28,21 @@ class HomeController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->paginate(24);
 
         return view('home', compact('user', 'category', 'posts'));
+    }
+
+    public function search(Request $request)
+    {
+      $search = $request->search;
+
+      // start query for Search
+      $data = DB::table('posts')
+          ->where('keyword', 'like', '%' . $search . '%')
+          ->get();
+      if(count($data) > 0)
+        return view('members.result', ['data' => $data]);
+      else
+        $request->session()->flash('error', 'We did not find results for this search.');
+        return redirect()->back();
     }
 
     public function contact(){

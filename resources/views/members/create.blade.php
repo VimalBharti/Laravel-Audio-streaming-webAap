@@ -2,6 +2,10 @@
 
 @section('title', 'Post new freebie')
 
+@section('stylesheet')
+  {!! Html::style('css/select2.min.css') !!}
+@stop
+
 @section('content')
 
   <div class="user-dashboard">
@@ -96,6 +100,28 @@
                 </div>
               </div>
 
+              <!-- Keywords / description -->
+              <div class="field">
+                <label class="label">Keywords / short description : </label>
+                <div class="control">
+                  <input class="input is-medium" type="text" placeholder="Keywords for healping in search" name="keyword">
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="field">
+                <label class="label">Select Tag</label>
+                <div class="control">
+                  <div class="select is-medium is-fullwidth">
+                    <select name="tags[]" class="select2-multi" multiple="multiple">
+                      @foreach($tags as $tag)
+                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                </div>
+              </div>
+
               <div class="field">
                 <div class="control">
                   <label class="checkbox terms-tick">
@@ -151,5 +177,8 @@
 @endsection
 
 @section('scripts')
-  <!-- {!! Html::script('js/validate.js') !!} -->
+  {!! Html::script('js/select2.min.js') !!}
+  <script type="text/javascript">
+    $('.select2-multi').select2();
+  </script>
 @endsection

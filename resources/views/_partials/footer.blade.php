@@ -1,7 +1,7 @@
 <footer class="footer main-footer">
   <div class="content has-text-centered">
     <div class="logo">
-      <img src="images/w-logo.png" alt="bybu.cc" class="foot-logo">
+      <img src="{{asset('images/w-logo.png')}}" alt="bybu.cc" class="foot-logo">
     </div>
 
     <div class="social-icons-foot">

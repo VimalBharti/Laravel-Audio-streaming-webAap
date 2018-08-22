@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\User;
+use App\Tag;
 use App\Category;
 use Validator;
 use Session;
@@ -35,9 +36,10 @@ class PostController extends Controller
     public function create(User $user)
     {
         $categories = Category::all();
+        $tags = Tag::all();
         $username = str_slug($user->name);
         $user = Auth::user();
-        return view('members.create', compact('categories', 'username', 'user'));
+        return view('members.create', compact('categories', 'tags', 'username', 'user'));
     }
 
     /**
@@ -68,6 +70,7 @@ class PostController extends Controller
       $post->url  = $request->url;
       $post->css  = $request->css;
       $post->coding = $request->coding;
+      $post->keyword = $request->keyword;
       $post->framework = $request->framework;
       $post->category_id = $request->category;
       $post->user_name = Auth::user()->name;
@@ -98,6 +101,8 @@ class PostController extends Controller
 
       $post->save();
 
+      $post->tags()->sync($request->tags, false);
+
       Session::flash('successPost', 'Success!');
       return redirect()->back();
     }
@@ -111,8 +116,9 @@ class PostController extends Controller
     public function show($uid)
     {
       $user = Auth::user();
+      $tags = Tag::all();
       $single = Post::where('uid', '=', $uid)->first();
-      return view('members.single', compact('single', 'user'));
+      return view('members.single', compact('single', 'user', 'tags'));
     }
 
     /**

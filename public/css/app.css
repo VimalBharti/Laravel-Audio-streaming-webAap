@@ -22530,18 +22530,49 @@ label.panel-block:hover {
 }
 
 .home-top {
-  height: 500px;
+  background-image: linear-gradient(45deg, #EA1E4F 0%, #302569 100%);
+  height: 350px;
+  margin-bottom: 20px;
 }
 
-.home-top img {
-  margin-bottom: 1em;
+.home-top .hero-body {
+  padding-top: 4em;
 }
 
-.home-top h2 {
+.home-top .hero-body h1 {
+  color: #ffffff;
+}
+
+.home-top .hero-body h2 {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #777;
+  color: #dbdbdb;
+}
+
+.home-top .search-bar-hero input {
+  border-radius: 20px;
+}
+
+.home-top .search-bar-hero button {
+  border-radius: 20px;
+  background-color: #e0288a;
+  color: #fff;
+  border-color: #e0288a;
+}
+
+.home-top .search-bar-hero button:hover {
+  color: #fff;
+  border-color: #e0288a;
+}
+
+.home-top .search-bar-hero h2.subtitle {
+  margin-top: 15px;
+}
+
+.home-top .search-bar-hero .error-box p {
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .navbar a.showcase-btn span:hover {
@@ -22913,6 +22944,10 @@ label.panel-block:hover {
   padding: 2em;
 }
 
+.single-design-page .posted-by-single-page a {
+  color: #890454;
+}
+
 .user-profile {
   background: -webkit-gradient(linear, left top, left bottom, from(#890454), to(#B3199F));
   background: linear-gradient(#890454, #B3199F);
@@ -23259,7 +23294,7 @@ label.panel-block:hover {
 }
 
 .join-Kom {
-  background-image: linear-gradient(135deg, #f97794 0%, #623aa2 100%);
+  background-image: linear-gradient(45deg, #EA1E4F 0%, #302569 100%);
   padding: 5em 2em;
   margin-top: 6em;
   position: relative;

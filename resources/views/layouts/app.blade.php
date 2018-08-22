@@ -11,6 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('stylesheet')
 
     <script type="text/javascript">
     <!-- Global site tag (gtag.js) - Google Analytics -->

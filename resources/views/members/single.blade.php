@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Free')
+@section('title', $single->uid)
 
 @section('content')
 
@@ -51,14 +51,28 @@
       </section>
 
       <div class="content posted-by-single-page">
-        <p><i class="fa fa-edit"></i> Submitted By:
-          <strong><a href="/profile/{{$single->user_slug}}">{{$single->user_name}}</a></strong>
-        </p>
-        @if(isset($single->credit))
-        <p><i class="fa fa-edit"></i> Design By:
-          <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
-        </p>
-        @endif
+        <div class="columns">
+          <div class="column is-half">
+            <p><i class="fa fa-edit"></i> Submitted By:
+              <strong><a href="/profile/{{$single->user_slug}}">{{$single->user_name}}</a></strong>
+            </p>
+          </div>
+          <div class="column is-half has-text-right">
+            @if(isset($single->credit))
+            <p><i class="fa fa-edit"></i> Design By:
+              <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
+            </p>
+            @endif
+          </div>
+        </div>
+      </div>
+
+      <div class="tags">
+        @foreach($single->tags as $tag)
+          <span class="tag is-dark">
+            {{ $tag->name }}
+          </span>
+        @endforeach
       </div>
 
     </div>

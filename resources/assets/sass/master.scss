@@ -80,13 +80,24 @@
 
 
 .home-top{
-  // background-color: #43cea2;
-  // background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
-  // background: linear-gradient(to right, #43cea2, #185a9d);
-  height: 500px;
-  img{margin-bottom: 1em;}
-  h2{font-size: 12px;text-transform: uppercase;font-weight: bold;color: #777;}
+  background-image: linear-gradient( 45deg, #EA1E4F 0%, #302569 100%);
+  height: 350px;margin-bottom: 20px;
+  .hero-body{
+    padding-top: 4em;
+    h1{color: #ffffff;}
+    h2{font-size: 12px;text-transform: uppercase;font-weight: bold;color: #dbdbdb;}
+  }
+  .search-bar-hero{
+    input{border-radius: 20px;}
+    button{
+      border-radius: 20px;background-color: #e0288a;color:#fff;border-color: #e0288a;
+      &:hover{color:#fff;border-color: #e0288a;}
+    }
+    h2.subtitle{margin-top: 15px;}
+    .error-box{p{color: #ffffff;font-weight: bold}}
+  }
 }
+
 .navbar{
   a.showcase-btn{
     span{&:hover{border-bottom: 1px solid #890454}}
@@ -296,7 +307,11 @@
     img{max-width: 100px;width: 100%;}
   }
   h3.not-avail{color: #a5a5a5;font-weight: 400;text-align: center;padding: 2em;}
-  .posted-by-single-page{border: 1px solid #efefef;padding: 2em;}
+  .posted-by-single-page{
+    border: 1px solid #efefef;padding: 2em;
+    a{color: #890454;}
+  }
+
 }
 // User Profile Private
 .user-profile{
@@ -496,7 +511,8 @@
 
 // Join button in home page
 .join-Kom{
-  background-image: linear-gradient( 135deg, rgb(249, 119, 148) 0%, rgb(98, 58, 162) 100%);
+  // background-image: linear-gradient( 135deg, rgb(249, 119, 148) 0%, rgb(98, 58, 162) 100%);
+  background-image: linear-gradient( 45deg, #EA1E4F 0%, #302569 100%);
   padding: 5em 2em;margin-top: 6em;position: relative;
   h1{color: #fff;font-size: 1.6em;font-weight: 600;}
   a{
