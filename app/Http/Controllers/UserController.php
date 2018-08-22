@@ -41,20 +41,8 @@ class UserController extends Controller
       $user = Auth::user();
       $posts = Post::where('user_id', Auth::id() )->get();
       $category = Category::all();
-      $headers = Post::where([
-        ['user_id', Auth::id()],
-        ['category_id', '1']
-      ])->get();
-      $footers = Post::where([
-        ['user_id', Auth::id()],
-        ['category_id', '2']
-      ])->get();
-      $templates = Post::where([
-        ['user_id', Auth::id()],
-        ['category_id', '3']
-      ])->get();
 
-      return view('members.dashboard', compact('user', 'posts', 'category', 'headers', 'footers', 'templates'));
+      return view('members.dashboard', compact('user', 'posts', 'category'));
   }
 
   public function publicProfile($username)
