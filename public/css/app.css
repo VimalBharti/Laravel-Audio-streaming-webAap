@@ -23745,7 +23745,7 @@ label.panel-block:hover {
 
 @media (min-width: 320px) and (max-width: 479px) {
   .home-top {
-    height: 50vh;
+    height: 70vh;
     background-color: #fefefe;
     padding-top: 12px;
   }
