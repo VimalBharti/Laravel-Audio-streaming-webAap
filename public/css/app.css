@@ -23748,11 +23748,12 @@ label.panel-block:hover {
     height: 70vh;
     background-color: #fefefe;
     padding-top: 12px;
+    z-index: 2;
   }
 
   .home-top img {
     width: 150px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   .home-top h1 {
