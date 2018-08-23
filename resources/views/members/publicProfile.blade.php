@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $user->name)
+
 @section('content')
 
   <div class="plain-footer-container public-profile-page">
