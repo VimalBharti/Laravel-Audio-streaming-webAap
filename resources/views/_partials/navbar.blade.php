@@ -70,9 +70,7 @@
       <!-- mobile navbar  -->
       <div id="side-menu" class="side-nav">
         <a class="navbar-burger burger nav-toggle" onclick="closeSlideMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+          <i class="fa fa-times" aria-hidden="true"></i>
         </a>
 
         @if (Auth::guest())

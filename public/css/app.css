@@ -23811,24 +23811,8 @@ label.panel-block:hover {
     background: #fefefe;
   }
 
-  .m-navbar-menu li {
-    padding-left: 20px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  .m-navbar-menu li .fa {
-    color: #777;
-    margin-right: 12px;
-  }
-
-  .m-navbar-menu li a {
-    color: #555;
-    font-size: 15px;
-  }
-
-  .m-navbar-menu li a:hover {
-    color: #444;
+  .side-nav .fa {
+    margin-right: 34px;
   }
 
   .showcase-area {

@@ -824,15 +824,8 @@
   }
 
   .navbar-brand{background: #fefefe;}
-  .m-navbar-menu{
-    li{
-      padding-left: 20px;padding-top: 8px;padding-bottom: 8px;
-      .fa{color: #777;margin-right: 12px;}
-      a{
-        color: #555;font-size: 15px;
-        &:hover{color: #444;}
-      }
-    }
+  .side-nav{
+      .fa{margin-right: 34px;}
   }
   .showcase-area{
     margin: 0px !important;
