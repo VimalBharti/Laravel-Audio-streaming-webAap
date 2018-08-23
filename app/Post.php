@@ -2,8 +2,6 @@
 
 namespace App;
 
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
@@ -11,7 +9,6 @@ class Post extends Model
 {
   protected $table = 'posts';
   use Sluggable;
-  use Likeable;
 
   public function category() {
       return $this->belongsTo('App\Category');
