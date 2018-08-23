@@ -38,9 +38,10 @@ class HomeController extends Controller
       // start query for Search
       $data = DB::table('posts')
           ->where('keyword', 'like', '%' . $search . '%')
+          ->orWhere('title','LIKE', '%' . $search . '%')
           ->get();
       if(count($data) > 0)
-        return view('members.result', ['data' => $data, '$user']);
+        return view('members.result', ['data' => $data])->withUser($user);
       else
         $request->session()->flash('error', 'We did not find results for this search.');
         return redirect()->back();
