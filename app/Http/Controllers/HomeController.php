@@ -32,6 +32,7 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+      $user = Auth::user();
       $search = $request->search;
 
       // start query for Search
@@ -39,7 +40,7 @@ class HomeController extends Controller
           ->where('keyword', 'like', '%' . $search . '%')
           ->get();
       if(count($data) > 0)
-        return view('members.result', ['data' => $data]);
+        return view('members.result', ['data' => $data, '$user']);
       else
         $request->session()->flash('error', 'We did not find results for this search.');
         return redirect()->back();
