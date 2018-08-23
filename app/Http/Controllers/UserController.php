@@ -56,17 +56,7 @@ class UserController extends Controller
 
       $posts = Post::where('user_id', $user->id)->get();
 
-      $headers = Post::where([
-        ['category_id', '1']
-      ])->get();
-      $footers = Post::where([
-        ['category_id', '2']
-      ])->get();
-      $templates = Post::where([
-        ['category_id', '3']
-      ])->get();
-
-      return view('members.publicProfile',  compact('user', 'post', 'follower', 'countries', 'category', 'posts', 'headers', 'footers', 'templates') );
+      return view('members.publicProfile',  compact('user', 'post', 'follower', 'countries', 'category', 'posts') );
   }
 
   public function destroy($id)
