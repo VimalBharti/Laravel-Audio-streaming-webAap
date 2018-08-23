@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $single->uid)
+@section('title', $single->slug)
 
 @section('content')
 
