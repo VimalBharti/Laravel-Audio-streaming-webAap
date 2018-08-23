@@ -59,17 +59,7 @@ class ProfileController extends Controller
       $countries = Country::all();
       $posts = Post::where('user_id', $user->id)->get();
 
-      $headers = Post::where([
-        ['category_id', '1']
-      ])->get();
-      $footers = Post::where([
-        ['category_id', '2']
-      ])->get();
-      $templates = Post::where([
-        ['category_id', '3']
-      ])->get();
-
-      return view('members.profile',  compact('user', 'post', 'mypost', 'follower', 'countries', 'posts', 'headers', 'footers', 'templates') );
+      return view('members.profile',  compact('user', 'post', 'mypost', 'follower', 'countries', 'posts') );
     }
 
     /**
