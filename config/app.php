@@ -162,7 +162,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
-
+        Cog\Laravel\Love\Providers\LoveServiceProvider::class,
 
     ],
 

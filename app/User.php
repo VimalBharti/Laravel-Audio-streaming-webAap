@@ -2,12 +2,15 @@
 
 namespace App;
 
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class User extends Authenticatable
 {
+    use Liker;
     use Notifiable;
     use Sluggable;
 

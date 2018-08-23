@@ -22636,7 +22636,7 @@ label.panel-block:hover {
 
 .navbar .side-nav {
   height: 100%;
-  width: 0;
+  width: 0px;
   position: fixed;
   z-index: 99;
   top: 0;

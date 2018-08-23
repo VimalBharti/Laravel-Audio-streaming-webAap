@@ -77,24 +77,18 @@
                   <div class="content">
                     @if(isset($post->psd))
                       <a class="button is-primary is-outlined">PSD</a>
-                    @else
-                      <a class="button is-static">PSD</a>
                     @endif
 
                     @if(isset($post->coding))
                       <a class="button is-primary is-outlined">{{$post->framework}}</a>
-                    @else
-                      <a class="button is-static">HTML</a>
                     @endif
 
                     @if(isset($post->css))
                       <a class="button is-primary is-outlined">CSS</a>
-                    @else
-                      <a class="button is-static">CSS</a>
                     @endif
 
                     <!-- <span class="icon total_likes is-pulled-right">
-                      22 <i class="fa fa-heart"></i>
+                      <a href="#"><i class="fa fa-heart"></i>
                     </span> -->
                   </div>
 
