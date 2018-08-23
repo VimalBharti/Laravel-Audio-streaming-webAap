@@ -10,8 +10,8 @@
     @include('_partials.navbar')
   </div>
 
-  <div class="container is-fluid">
-    <section id="infinite-scroll">
+  <section id="infinite-scroll">
+    <div class="container is-fluid">
       <div class="columns is-multiline home-post-list">
         @if (isset($data))
           @foreach ($data as $post)
@@ -68,8 +68,9 @@
           @endforeach
         @endif
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
 </div>
 
   @include('pages.join-com')

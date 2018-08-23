@@ -9,8 +9,9 @@
       @include('_partials.navbar')
     </div>
 
-    <div class="container is-widescreen with-plain-footer">
+    <section class="with-plain-footer">
 
+      <div class="container is-fluid">
         <!-- picture -->
         <div class="columns top-pad">
 
@@ -86,68 +87,64 @@
                 </li>
               </ul>
             </div>
+        </div>
+        <!-- end is-4 -->
 
-          </div>
-          <!-- end is-4 -->
-
-          <div class="column is-8 center-bar">
-
-              <section>
-                <div class="columns is-multiline all-post-list">
-                  @foreach ($posts as $post)
-                    <div class="column is-4 single-post">
-                      <div class="card">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <a href="{{route('post.show', $post->slug)}}" target="_blank">
-                              <img src="/uploads/design/{{ $post->image }}">
-                            </a>
-                          </figure>
+        <div class="column is-8 center-bar">
+            <section>
+              <div class="columns is-multiline all-post-list">
+                @foreach ($posts as $post)
+                  <div class="column is-4 single-post">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <a href="{{route('post.show', $post->slug)}}" target="_blank">
+                            <img src="/uploads/design/{{ $post->image }}">
+                          </a>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="user-small-image">
+                            <figure class="image is-24x24 user-image">
+                              <img src="/avatar/{{$post->user_image}}" class="is-rounded">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <a href="#"><p class="title is-5">{{$post->user_name}}</p></a>
+                          </div>
                         </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="user-small-image">
-                              <figure class="image is-24x24 user-image">
-                                <img src="/avatar/{{$post->user_image}}" class="is-rounded">
-                              </figure>
-                            </div>
-                            <div class="media-content">
-                              <a href="#"><p class="title is-5">{{$post->user_name}}</p></a>
-                            </div>
-                          </div>
 
-                          <div class="content">
-                            @if(isset($post->psd))
-                              <a class="button is-primary is-outlined">PSD</a>
-                            @else
-                              <a class="button is-static">PSD</a>
-                            @endif
-                            @if(isset($post->coding))
-                              <a class="button is-primary is-outlined">{{$post->framework}}</a>
-                            @else
-                              <a class="button is-static">HTML</a>
-                            @endif
-                            @if(isset($post->css))
-                              <a class="button is-primary is-outlined">CSS</a>
-                            @else
-                              <a class="button is-static">CSS</a>
-                            @endif
-
-                          </div>
+                        <div class="content">
+                          @if(isset($post->psd))
+                            <a class="button is-primary is-outlined">PSD</a>
+                          @else
+                            <a class="button is-static">PSD</a>
+                          @endif
+                          @if(isset($post->coding))
+                            <a class="button is-primary is-outlined">{{$post->framework}}</a>
+                          @else
+                            <a class="button is-static">HTML</a>
+                          @endif
+                          @if(isset($post->css))
+                            <a class="button is-primary is-outlined">CSS</a>
+                          @else
+                            <a class="button is-static">CSS</a>
+                          @endif
 
                         </div>
+
                       </div>
                     </div>
-                  @endforeach
-                </div>
-              </section>
-          </div>
-
+                  </div>
+                @endforeach
+              </div>
+            </section>
         </div>
-        <!-- columns end -->
+      </div>
 
-    </div>
-    <!-- container ends -->
+    </section>
+    <!-- section ends -->
 
   </div>
 

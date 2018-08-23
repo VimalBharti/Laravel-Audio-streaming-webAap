@@ -22,7 +22,7 @@ function myFramework(){
   }
 }
 
-// Menu Show hidden
+// Menu Show hidden on auth link
 $('html').click(function() {
     $('#dropdown-menu-auth').hide();
  })
@@ -34,6 +34,15 @@ $('html').click(function() {
 $('#auth-name').click(function(e) {
  $('#dropdown-menu-auth').toggle();
 });
+// mobile navbar
+// Menu Function
+function openSlideMenu(){
+    document.getElementById('side-menu').style.width = '250px';
+}
+
+function closeSlideMenu(){
+    document.getElementById('side-menu').style.width = '0';
+}
 
 // Preloader
 setTimeout(function() {

@@ -22634,6 +22634,82 @@ label.panel-block:hover {
   color: #890454;
 }
 
+.navbar .side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  background: #fefefe;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar .side-nav li {
+  list-style: none;
+}
+
+.navbar .side-nav .btn-close {
+  text-align: right;
+  line-height: 70px;
+  vertical-align: middle;
+  padding: 0 30px;
+}
+
+.navbar .side-nav .btn-close svg {
+  line-height: 70px;
+  vertical-align: middle;
+}
+
+.navbar .side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #444444;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .side-nav a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.navbar .side-nav a .fa {
+  color: #555555;
+  margin-right: 10px;
+}
+
+.navbar .side-nav .auth-details {
+  text-align: center;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.navbar .side-nav .auth-details img {
+  width: 82px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid #efefef;
+}
+
+.navbar .side-nav .auth-details h3 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+.navbar .side-nav .auth-details h4 {
+  margin-top: 0px;
+  color: #ccc;
+  font-weight: 400;
+  font-size: 13px;
+}
+
 .login-page {
   height: 100vh;
 }
@@ -23669,7 +23745,7 @@ label.panel-block:hover {
 
 @media (min-width: 320px) and (max-width: 479px) {
   .home-top {
-    height: 250px;
+    height: 50vh;
     background-color: #fefefe;
     padding-top: 12px;
   }
@@ -23686,6 +23762,31 @@ label.panel-block:hover {
   .home-top h2 {
     font-size: 9px;
     color: #777;
+  }
+
+  .home-top .search-bar-hero input {
+    border-radius: 20px;
+  }
+
+  .home-top .search-bar-hero button {
+    border-radius: 20px;
+    background-color: #e0288a;
+    color: #fff;
+    border-color: #e0288a;
+  }
+
+  .home-top .search-bar-hero button:hover {
+    color: #fff;
+    border-color: #e0288a;
+  }
+
+  .home-top .search-bar-hero h2.subtitle {
+    margin-top: 5px;
+  }
+
+  .home-top .search-bar-hero .error-box p {
+    color: #ffffff;
+    font-weight: bold;
   }
 
   .single-design-page .tabs li a {

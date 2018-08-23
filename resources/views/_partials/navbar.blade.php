@@ -4,11 +4,11 @@
         <a class="navbar-item" href="{{route('home')}}">
           <img src="{{asset('images/logo.png')}}" alt="bybu.cc">
         </a>
-        <span class="navbar-burger burger nav-toggle" data-target="navMenu">
+        <a class="navbar-burger burger nav-toggle" onclick="openSlideMenu()">
           <span></span>
           <span></span>
           <span></span>
-        </span>
+        </a>
       </div>
 
       <div class="navbar-menu" id="navMenu">
@@ -66,5 +66,32 @@
         <!-- navbar-end -->
       </div>
       <!-- navbar-menu -->
+
+      <!-- mobile navbar  -->
+      <div id="side-menu" class="side-nav">
+        <a class="navbar-burger burger nav-toggle" onclick="closeSlideMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        @if (Auth::guest())
+          <li><a class="navbar-item login-btn" href="{{url('/login')}}">
+            <i class="fa fa-sign-in"></i> Login
+          </a></li>
+        @else
+          <li class="auth-details">
+              <img src="/avatar/{{ Auth::user()->avatar }}" class="user-pic-thumb">
+              <h3>{{ Auth::user()->name }}</h3>
+          </li>
+          <li><a href="{{route('members.create')}}"><i class="fa fa-plus-circle"></i>Post Freebie</a></li>
+          <li><a href="{{route('showcase.dash')}}"><i class="fa fa-plus-circle"></i>Showcase</a></li>
+          <li><a href="{{route('member.dashboard')}}"><i class="fa fa-bars"></i>My Freebies</a></li>
+          <li><a href="{{route('profiles.show', $user->username)}}"><i class="fa fa-user-circle-o"></i>Profile</a></li>
+          <li><a href="{{route('user.logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
+        @endif
+      </div>
+      <!-- mobile navbar ends  -->
+
     </div>
   </nav>
