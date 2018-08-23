@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="plain-footer-container public-profile-page">
+<div class="plain-footer-container">
 
   <div class="menu-bar">
     @include('_partials.navbar')
