@@ -23745,15 +23745,14 @@ label.panel-block:hover {
 
 @media (min-width: 320px) and (max-width: 479px) {
   .home-top {
-    height: 70vh;
+    height: 80vh;
     background-color: #fefefe;
     padding-top: 12px;
-    z-index: 2;
   }
 
   .home-top img {
     width: 150px;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   .home-top h1 {
