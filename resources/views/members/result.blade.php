@@ -19,7 +19,7 @@
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
-                    <a href="{{route('post.show', $post->uid)}}" target="_blank">
+                    <a href="{{route('post.show', $post->slug)}}" target="_blank">
                       <img src="/uploads/design/{{ $post->image }}" class="thumb">
                     </a>
                   </figure>
