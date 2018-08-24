@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Create new account')
+
 @section('content')
   <div class="columns login-page">
 
