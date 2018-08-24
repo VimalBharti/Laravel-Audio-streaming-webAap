@@ -52,8 +52,8 @@ class PostController extends Controller
     {
       // validate the data
       $rules = [
-          'image' => 'required|mimes:jpeg,bmp,png|size:2000',
-          'psd' => 'required_without_all:css,coding|file|mimes:psd|size:6000',
+          'image' => 'required|mimes:jpeg,bmp,png|max:2000',
+          'psd' => 'required_without_all:css,coding|file|mimes:psd|max:6000',
           'css' => 'required_without_all:psd',
           'coding'=> 'required_without_all:psd',
       ];
