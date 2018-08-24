@@ -99,7 +99,7 @@
                       <div class="card-image">
                         <figure class="image is-4by3">
                           <a href="{{route('post.show', $post->slug)}}" target="_blank">
-                            <img src="/uploads/design/{{ $post->image }}">
+                            <img src="/uploads/design/thumbs/{{ $post->image }}">
                           </a>
                         </figure>
                       </div>

@@ -134,7 +134,7 @@
                 <div class="control">
                   <label class="checkbox terms-tick">
                     <input type="checkbox" required>
-                    I agree to the <a href="#">terms and conditions</a>
+                    I agree to the <a href="{{url('/terms')}}">terms and conditions</a>
                   </label>
                 </div>
               </div>

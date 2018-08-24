@@ -81,6 +81,10 @@ class PostController extends Controller
           $filename = rand(1, 100) . '_' . $image->getClientOriginalName();
           Image::make($image)->save(public_path('uploads/design/' . $filename));
           $post->image = $filename;
+
+          $thumbPath = public_path('uploads/design/thumbs');
+          $thumb_img = Image::make($image->getRealPath())->resize(300, 250);
+          $thumb_img->save($thumbPath . '/' . $filename, 60);
       }
 
       // PSD Upload
@@ -162,6 +166,12 @@ class PostController extends Controller
       if(!empty($post->image)) {
           if(file_exists(public_path('/uploads/design/'. $post->image))){
               unlink(public_path('/uploads/design/'. $post->image));
+          }
+      }
+      // thumbnails
+      if(!empty($post->image)) {
+          if(file_exists(public_path('/uploads/design/thumbs/'. $post->image))){
+              unlink(public_path('/uploads/design/thumbs/'. $post->image));
           }
       }
 
