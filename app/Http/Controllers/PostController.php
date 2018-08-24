@@ -83,7 +83,7 @@ class PostController extends Controller
           $post->image = $filename;
 
           $thumbPath = public_path('uploads/design/thumbs');
-          $thumb_img = Image::make($image->getRealPath())->resize(300, 250);
+          $thumb_img = Image::make($image->getRealPath())->resize(600, 500);
           $thumb_img->save($thumbPath . '/' . $filename, 100);
       }
 
