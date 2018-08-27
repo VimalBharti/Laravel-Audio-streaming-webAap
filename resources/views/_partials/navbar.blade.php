@@ -76,9 +76,13 @@
         </a>
 
         @if (Auth::guest())
-          <li><a class="navbar-item login-btn" href="{{url('/login')}}">
+          <li class="res-log-btn"><a class="navbar-item login-btn" href="{{url('/login')}}">
             <i class="fa fa-sign-in"></i> Login
           </a></li>
+          <li class="res-log-btn"><a class="navbar-item login-btn" href="{{url('/register')}}">
+            <i class="fa fa-sign-in"></i> Register
+          </a></li>
+
         @else
           <li class="auth-details">
               <img src="/avatar/{{ Auth::user()->avatar }}" class="user-pic-thumb">

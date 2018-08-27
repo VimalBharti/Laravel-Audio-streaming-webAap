@@ -10,6 +10,12 @@
 
   <div class="single-design-page">
 
+    <div class="single-post-customize is-hidden-mobile">
+      <a href="{{route('customize-design', $single->slug)}}">
+        <i class="fa fa-cog" aria-hidden="true"></i>Customize
+      </a>
+    </div>
+
     <div class="container">
       <div class="featured-image-single has-text-centered">
         <img src="/uploads/design/{{ $single->image }}" class="is-fullheight is-fullwidth">

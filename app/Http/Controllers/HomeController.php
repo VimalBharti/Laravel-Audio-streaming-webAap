@@ -51,16 +51,35 @@ class HomeController extends Controller
       $user = Auth::user();
       return view('pages.contact', compact('user'));
     }
-    public function contactUSPost(Request $request){
-      $this->validate($request, [
-        'name' => 'required',
-        'email' => 'required|email',
-        'message' => 'required'
-        ]);
+    // public function contactUSPost(Request $request){
+    //   $this->validate($request, [
+    //     'name' => 'required',
+    //     'email' => 'required|email',
+    //     'message' => 'required'
+    //     ]);
+    //
+    //    ContactUs::create($request->all());
+    //
+    //    return back()->with('success', 'Thanks for contacting us!');
+    // }
+    // getContactForm
+    public function postContact(Request $request) {
+      $this->validate($request, ['email' => 'required|email']);
 
-       ContactUs::create($request->all());
+      $data = array(
+        'name' => $request->name,
+        'email' => $request->email,
+        'bodyMessage' => $request->message
+      );
 
-       return back()->with('success', 'Thanks for contacting us!');
+      Mail::send('emails.contact', $data, function($message) use ($data){
+        $message->from($data['email']);
+        $message->to('cc.bybu@gmail.com');
+        $message->subject('new contact form');
+      });
+
+      Session::flash('success', "Congratz! Form Sent Successfully");
+      return redirect()->back();
     }
 
     public function all(Request $request){

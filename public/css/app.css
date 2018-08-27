@@ -22651,6 +22651,15 @@ label.panel-block:hover {
   list-style: none;
 }
 
+.navbar .side-nav .res-log-btn {
+  margin-bottom: 10px;
+}
+
+.navbar .side-nav .res-log-btn a {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
 .navbar .side-nav .btn-close {
   text-align: right;
   line-height: 70px;
@@ -22947,6 +22956,61 @@ label.panel-block:hover {
 
 .single-design-page {
   padding-top: 4px;
+  position: relative;
+}
+
+.single-design-page .single-post-customize {
+  position: absolute;
+  top: 2%;
+  right: 0;
+  z-index: 2;
+}
+
+.single-design-page .single-post-customize a {
+  background-color: #890454;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px 0 0 4px;
+}
+
+.single-design-page .single-post-customize a .fa {
+  margin-right: 8px;
+  margin-left: 2px;
+  font-size: 21px;
+}
+
+.single-design-page .design-customize-page .editor-area {
+  height: 100%;
+  width: 100%;
+}
+
+.single-design-page .design-customize-page .editor-area .b-tabs {
+  height: 100%;
+}
+
+.single-design-page .design-customize-page .editor-area section.tab-content {
+  height: 100%;
+}
+
+.single-design-page .design-customize-page .editor-area .tab-item {
+  height: 100%;
+}
+
+.single-design-page .design-customize-page .editor-area pre.custom {
+  padding: 0px;
+  height: 100%;
+  max-height: 1024px;
+}
+
+.single-design-page .design-customize-page .editor-area textarea {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.single-design-page .design-customize-page iframe {
+  height: 100vh;
+  width: 100%;
 }
 
 .single-design-page .tabs li a {

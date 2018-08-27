@@ -22,7 +22,8 @@
 
   <section class="is-white contact-page">
     <div class="container">
-      {!! Form::open(['route'=>'contactus.store']) !!}
+      <form action="{{ url('/contact-us') }}" method="POST">
+        {{ csrf_field() }}
         <div class="columns is-centered">
           <div class="column is-half">
             <div class="field">
@@ -66,7 +67,7 @@
             </div>
           </div>
         </div>
-      {!! Form::close() !!}
+      </form>
     </div>
   </section>
 

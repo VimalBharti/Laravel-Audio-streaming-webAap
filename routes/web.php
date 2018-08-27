@@ -38,7 +38,8 @@ Route::get('/privacy', 'HomeController@privacy');
 Route::get('/guideline', 'HomeController@guideline');
 
 Route::get('/contact-us', 'HomeController@contact')->name('contact');
-Route::post('/contact-us', ['as'=>'contactus.store','uses'=>'HomeController@contactUSPost']);
+Route::post('/contact-us', 'HomeController@postContact');
+// Route::post('/contact-us', ['as'=>'contactus.store','uses'=>'HomeController@contactUSPost']);
 
 // all posts
 Route::get('/all-designs', 'HomeController@all')->name('all-post');
@@ -73,6 +74,7 @@ Route::get('/{slug}', 'ShowcaseController@getSingle')->name('showcase.single');
 
 // Single Post
 Route::get('design/{slug}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('slug', '[\w\d\-\_]+');
+Route::get('design/{slug}/customize', ['as' => 'customize-design', 'uses' => 'PostController@custom'])->where('slug', '[\w\d\-\_]+');
 
 Route::prefix('admin')->group(function(){
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

@@ -83,7 +83,7 @@ class PostController extends Controller
           $post->image = $filename;
 
           $thumbPath = public_path('uploads/design/thumbs');
-          $thumb_img = Image::make($image->getRealPath())->resize(600, 500);
+          $thumb_img = Image::make($image->getRealPath())->resize(600, 550);
           $thumb_img->save($thumbPath . '/' . $filename, 100);
       }
 
@@ -120,6 +120,14 @@ class PostController extends Controller
       $tags = Tag::all();
       $single = Post::where('slug', '=', $slug)->first();
       return view('members.single', compact('single', 'user', 'tags'));
+    }
+
+    public function custom($slug)
+    {
+      $user = Auth::user();
+      $tags = Tag::all();
+      $single = Post::where('slug', '=', $slug)->first();
+      return view('members.single-customize', compact('single', 'user', 'tags'));
     }
 
     /**
