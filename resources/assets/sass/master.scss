@@ -518,7 +518,7 @@
 .home-post-list{
   // padding: 2.5em 1.8em;
   padding: 2.5em 0;
-  img.thumb{width: 100%;height: 100%;object-fit: contain;}
+  img.thumb{width: 100%;height: 100%;object-fit: cover;}
   .single-post{
     .card{
       box-shadow: none;border: 1px solid #efefef;
