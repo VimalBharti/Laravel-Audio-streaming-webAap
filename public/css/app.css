@@ -23347,7 +23347,8 @@ label.panel-block:hover {
 }
 
 .home-post-list .single-post .card-content .title-area a {
-  color: #444;
+  color: #555;
+  font-weight: 600;
 }
 
 .home-post-list .single-post .card-content .media .user-image {
