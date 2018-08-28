@@ -521,7 +521,11 @@
   img.thumb{width: 100%;height: 100%;object-fit: cover;}
   .single-post{
     .card-content{
-      padding: 0.8rem;
+      padding: 0.3rem 0.8rem;
+      .title-area{
+        margin-bottom: 12px;margin-top: 5px;
+        a{color: #444;}
+      }
       .media{
         .user-image{margin-right: 5px;
           img{border: 1px solid #efefef;}

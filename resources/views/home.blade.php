@@ -61,17 +61,8 @@
                   </figure>
                 </div>
                 <div class="card-content">
-                  <div class="media">
-                    <div class="user-small-image">
-                      <figure class="image is-24x24 user-image">
-                        <img src="/avatar/{{$post->user_image}}" class="is-rounded">
-                      </figure>
-                    </div>
-                    <div class="media-content">
-                      <a href="/profile/{{$post->user_slug}}" target="_blank">
-                        <p class="title is-5">{{$post->user_name}}</p>
-                      </a>
-                    </div>
+                  <div class="title-area">
+                    <a href="{{route('post.show', $post->slug)}}" target="_blank">{{ $post->title }}</a>
                   </div>
 
                   <div class="content">
@@ -90,6 +81,18 @@
                     <!-- <span class="icon total_likes is-pulled-right">
                       <a href="#"><i class="fa fa-heart"></i>
                     </span> -->
+                    <div class="media is-pulled-right">
+                      <div class="user-small-image">
+                        <figure class="image is-24x24 user-image">
+                          <img src="/avatar/{{$post->user_image}}" class="is-rounded">
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <a href="/profile/{{$post->user_slug}}" target="_blank">
+                          <p class="title is-5">{{$post->user_name}}</p>
+                        </a>
+                      </div>
+                    </div>
                   </div>
 
                 </div>

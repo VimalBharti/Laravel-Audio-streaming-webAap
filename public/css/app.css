@@ -23332,7 +23332,16 @@ label.panel-block:hover {
 }
 
 .home-post-list .single-post .card-content {
-  padding: 0.8rem;
+  padding: 0.3rem 0.8rem;
+}
+
+.home-post-list .single-post .card-content .title-area {
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.home-post-list .single-post .card-content .title-area a {
+  color: #444;
 }
 
 .home-post-list .single-post .card-content .media .user-image {
