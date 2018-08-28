@@ -84,13 +84,10 @@
                     <div class="media is-pulled-right">
                       <div class="user-small-image">
                         <figure class="image is-24x24 user-image">
-                          <img src="/avatar/{{$post->user_image}}" class="is-rounded">
+                          <a href="/profile/{{$post->user_slug}}" target="_blank">
+                            <img src="/avatar/{{$post->user_image}}" class="is-rounded">
+                          </a>
                         </figure>
-                      </div>
-                      <div class="media-content">
-                        <a href="/profile/{{$post->user_slug}}" target="_blank">
-                          <p class="title is-5">{{$post->user_name}}</p>
-                        </a>
                       </div>
                     </div>
                   </div>
