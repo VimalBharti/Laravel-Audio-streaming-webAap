@@ -23324,9 +23324,13 @@ label.panel-block:hover {
   padding: 2.5em 0;
 }
 
+.home-post-list .card-image {
+  height: 200px;
+}
+
 .home-post-list img.thumb {
   width: 100%;
-  height: 100%;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
