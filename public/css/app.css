@@ -23325,12 +23325,12 @@ label.panel-block:hover {
 }
 
 .home-post-list .card-image {
-  height: 200px;
+  height: 180px;
 }
 
 .home-post-list img.thumb {
   width: 100%;
-  height: 200px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
 }
