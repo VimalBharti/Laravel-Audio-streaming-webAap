@@ -321,17 +321,20 @@
 }
 // Single Freebies Page
 .single-design-page{
-  padding-top: 4px;position: relative;
+  padding-top: 4px;
 
-  .single-post-customize{
-    position: absolute;top: 2%;right: 0;z-index: 2;
-    a{
-      background-color: #890454;color: #fff;padding: 12px;border-radius: 4px 0 0 4px;
-      .fa{margin-right: 8px;margin-left: 2px;font-size: 21px;}
+  // Post Preview PAGE
+  .preview-control-btn-bottom{
+    margin-bottom: 6px;
+    p{width: 50%;
+      a{
+        &:hover{background: #efefef;}
+      }
     }
   }
   // Customize page
   .design-customize-page{
+    margin-bottom: 0px;
     .editor-area{
       height: 100%;width: 100%;
       .b-tabs{height: 100%;}
@@ -340,7 +343,20 @@
       pre.custom{padding: 0px;height: 100%;max-height: 1024px;}
       textarea{width: 100%;height: 100%;padding: 15px;}
     }
+    .iframe-box{padding: 0px;margin: 0px;}
     iframe{height: 100vh;width: 100%;}
+  }
+
+  .featured-image-single{
+    position: relative;
+    .single-post-customize-btn{
+      position: absolute;top: 0;right: 0;z-index: 2;
+      a{
+        background-color: #f7f7f7;border: 1px solid #dcdcdc;
+        color: #333;padding: 12px;border-radius: 0 0 0 4px;font-size: 15px;
+        .fa{margin-right: 8px;margin-left: 2px;font-size: 18px;}
+      }
+    }
   }
 
   .tabs{

@@ -74,6 +74,7 @@ Route::get('/{slug}', 'ShowcaseController@getSingle')->name('showcase.single');
 
 // Single Post
 Route::get('design/{slug}', ['as' => 'post.show', 'uses' => 'PostController@show'])->where('slug', '[\w\d\-\_]+');
+Route::get('design/{slug}/preview', ['as' => 'preview-design', 'uses' => 'PostController@preview'])->where('slug', '[\w\d\-\_]+');
 Route::get('design/{slug}/customize', ['as' => 'customize-design', 'uses' => 'PostController@custom'])->where('slug', '[\w\d\-\_]+');
 
 Route::prefix('admin')->group(function(){

@@ -88,6 +88,7 @@
               $("head", target).append("<style>" + css + "</style>");
 
           });
+          $('.innerbox').keyup();
     });
   </script>
   @stop

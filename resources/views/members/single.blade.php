@@ -10,15 +10,16 @@
 
   <div class="single-design-page">
 
-    <div class="single-post-customize is-hidden-mobile">
-      <a href="{{route('customize-design', $single->slug)}}">
-        <i class="fa fa-cog" aria-hidden="true"></i>Customize
-      </a>
-    </div>
-
     <div class="container">
       <div class="featured-image-single has-text-centered">
         <img src="/uploads/design/{{ $single->image }}" class="is-fullheight is-fullwidth">
+
+        <div class="single-post-customize-btn is-hidden-mobile">
+          <a href="{{route('preview-design', $single->slug)}}">
+            <i class="fa fa-eye" aria-hidden="true"></i>Preview
+          </a>
+        </div>
+
       </div>
 
       <section>
@@ -65,7 +66,7 @@
           </div>
           <div class="column is-half has-text-right">
             @if(isset($single->credit))
-            <p><i class="fa fa-edit"></i> Design By:
+            <p><i class="fa fa-edit"></i> Credit:
               <strong><a href="{{$single->url}}" target="_blank">{{$single->credit}}</a></strong>
             </p>
             @endif

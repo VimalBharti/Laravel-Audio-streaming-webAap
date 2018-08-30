@@ -122,6 +122,14 @@ class PostController extends Controller
       return view('members.single', compact('single', 'user', 'tags'));
     }
 
+    public function preview($slug)
+    {
+      $user = Auth::user();
+      $tags = Tag::all();
+      $single = Post::where('slug', '=', $slug)->first();
+      return view('members.preview', compact('single', 'user', 'tags'));
+    }
+
     public function custom($slug)
     {
       $user = Auth::user();
