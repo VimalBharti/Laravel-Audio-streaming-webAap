@@ -146,7 +146,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = Auth::user();
+      $tags = Tag::all();
+      $categories = Category::all();
+      $post = Post::find($id);
+      return view('members.edit', compact('post', 'user', 'tags', 'categories'));
     }
 
     /**
@@ -158,7 +162,20 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+      $post = Post::find($id);
+
+      $post->credit      = $request->input('credit');
+      $post->url         = $request->input('url');
+      $post->css         = $request->input('css');
+      $post->coding      = $request->input('coding');
+      $post->keyword     = $request->input('keyword');
+      $post->framework   = $request->input('framework');
+
+      $post->save();
+
+      Session::flash('successPost', 'Success!');
+      return redirect()->back();
     }
 
     /**

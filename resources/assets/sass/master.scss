@@ -234,6 +234,17 @@
 }
 .user-dashboard{
 
+  .card-image{
+    figure.image{
+      position: relative;
+      span.edit-btn{
+        position: absolute;top: 0;right: 0;
+        a{
+          font-size: 13px;background: #555;color: #fff;padding: 4px 10px;
+        }
+      }
+    }
+  }
   .aside {
     display: block;
     background-color: #F9F9F9;

@@ -25,11 +25,6 @@ Route::group(['middleware' => 'auth'], function(){
     // Showcase
     Route::resource('showcase/me', 'ShowcaseController');
 });
-// Search bar in home page
-Route::get('/search', [
-    'as' => 'api.search',
-    'uses' => 'Api\SearchController@search'
-]);
 
 // Pgaes
 Route::get('/about', 'HomeController@about');

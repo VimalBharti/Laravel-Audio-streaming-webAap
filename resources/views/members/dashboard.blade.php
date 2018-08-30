@@ -25,6 +25,10 @@
                       <a href="{{route('post.show', $post->slug)}}" target="_blank">
                         <img src="/uploads/design/thumbs/{{ $post->image }}" class="thumb">
                       </a>
+
+                      <span class="edit-btn">
+                          <a href="{{route('members.edit', $post->id)}}">edit</a>
+                      </span>
                     </figure>
                   </div>
                   <div class="card-content">
