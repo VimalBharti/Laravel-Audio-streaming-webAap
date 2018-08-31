@@ -30,4 +30,3 @@
     <p class="foot-p">Handcrafted by me &copy; bybu.cc</p>
   </div>
 </footer>
-@include('pages.google-analytics')
