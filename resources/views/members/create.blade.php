@@ -185,8 +185,15 @@
 @endsection
 
 @section('scripts')
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123989535-1"></script>
   {!! Html::script('js/select2.min.js') !!}
   <script type="text/javascript">
     $('.select2-multi').select2();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-123989535-1');
   </script>
 @endsection
