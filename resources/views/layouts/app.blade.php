@@ -8,6 +8,7 @@
     <title>@yield('title') - Bybu Freebies | PSD + Templates + Designs and other Free Stuff</title>
     <meta name="description" content="Download Free and Exclusive PSD Files with HTML and CSS Code. Free Showcase your design -  free for lifetime. A collection of free high quality website templates designed with Photoshop. Bybu.cc - freebies ">
     <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="YaDpQGJSl0pcVl7f2yniOo5Suv1b7pLUU6sMdYAW9lM" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
