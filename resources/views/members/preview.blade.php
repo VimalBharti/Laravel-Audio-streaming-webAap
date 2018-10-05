@@ -11,7 +11,6 @@
         <div class="" style="display:none">
             <textarea class="innerbox html">{{ $single->coding }}</textarea>
             <textarea class="innerbox css">{{$single->css}}</textarea>
-            <textarea class="innerbox js">{{$single->js}}</textarea>
         </div>
         <!-- column ends editor -->
         <div class="column is-12 iframe-box">
@@ -64,10 +63,6 @@
           return css
       }
 
-      function fetchJs(){
-          var css = $(".js").val();
-          return js
-      }
 
         $(".innerbox").on("keyup", function(){
 
@@ -77,11 +72,9 @@
 
             var html = fetchHtml();
             var css = fetchCss();
-            var js = fetchJs();
 
             $("body", target).append(html);
             $("head", target).append("<style>" + css + "</style>");
-            $("head", target).append("<script>" + css + "</script>");
 
         });
         $('.innerbox').keyup();
