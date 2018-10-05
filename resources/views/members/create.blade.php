@@ -67,17 +67,6 @@
                   <input class="input is-medium" type="text" placeholder="Profile URL" name="url">
                 </div>
               </div>
-              <!-- PSD -->
-              <div class="field">
-                <label class="label">Upload PSD if available:</label>
-                <div class="control with-border">
-                  <div class="file has-name">
-                    <div class="featured">
-                        <input type="file" name="psd">
-                    </div>
-                  </div>
-                </div>
-              </div>
               <!-- Framework -->
               <div class="framework-checkbtn field">
                 <label class="label with-border">Framework name (if use any) :
@@ -105,6 +94,13 @@
                 <label class="label">Paste Markup : </label>
                 <div class="control">
                   <textarea class="textarea" name="coding" placeholder="Markup Code" rows="10"></textarea>
+                </div>
+              </div>
+              <!-- JavaScript -->
+              <div class="field">
+                <label class="label">JavaScript : </label>
+                <div class="control">
+                  <textarea class="textarea" name="js" placeholder="Markup Code" rows="10"></textarea>
                 </div>
               </div>
 
@@ -163,12 +159,6 @@
             <ul>
               <li>Mention designer name if you use his/her design.</li>
               <li>with his/her social account url; (behance, dribbble, etc)</li>
-            </ul>
-
-            <h4>PSD</h4>
-            <ul>
-              <li>Upload only PSD File</li>
-              <li>Max PSD size: 6MB</li>
             </ul>
 
             <h4>Framework</h4>

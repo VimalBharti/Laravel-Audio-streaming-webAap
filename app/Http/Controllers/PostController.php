@@ -53,9 +53,8 @@ class PostController extends Controller
       // validate the data
       $rules = [
           'image' => 'required|mimes:jpeg,gif,png|max:2000',
-          'psd' => 'required_without_all:css,coding|file|mimes:psd|max:6000',
-          'css' => 'required_without_all:psd',
-          'coding'=> 'required_without_all:psd',
+          'css' => 'required_without_all:js',
+          'coding'=> 'required_without_all:js',
       ];
 
       $this->validate($request, $rules);
@@ -67,6 +66,7 @@ class PostController extends Controller
       $post->url  = $request->url;
       $post->css  = $request->css;
       $post->coding = $request->coding;
+      $post->js = $request->js;
       $post->keyword = $request->keyword;
       $post->framework = $request->framework;
       $post->category_id = $request->category;
@@ -86,19 +86,6 @@ class PostController extends Controller
           $thumb_img = Image::make($image->getRealPath())->resize(600, 550);
           $thumb_img->save($thumbPath . '/' . $filename, 100);
       }
-
-      // PSD Upload
-      if ($request->hasFile('psd')) {
-            $file = $request->file('psd');
-            $extension = Input::file('psd')->getClientOriginalName();
-            $name = rand(1, 999). '_' . $extension;
-            $fullpath = $name;
-
-            $request->file('psd')->move(
-                base_path() . '/public/uploads/psd/', $name
-            );
-            $post->psd = $fullpath;
-        }
 
       $post->save();
 
@@ -187,14 +174,8 @@ class PostController extends Controller
     public function destroy($id)
     {
       $post = Post::find($id);
-      $psd = $post->psd;
       $design= $post->image;
 
-      if(!empty($post->psd)) {
-          if (file_exists(public_path('/uploads/psd/'. $post->psd))){
-              unlink(public_path('/uploads/psd/'. $post->psd));
-          }
-      }
 
       if(!empty($post->image)) {
           if(file_exists(public_path('/uploads/design/'. $post->image))){

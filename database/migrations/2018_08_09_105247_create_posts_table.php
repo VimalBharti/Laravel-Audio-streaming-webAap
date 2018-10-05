@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('slug')->nullable();
             $table->string('image');
             $table->string('framework')->nullable()->default('html');
-            $table->string('psd')->nullable();
+            $table->text('js')->nullable();
             $table->text('css')->nullable();
             $table->text('coding')->nullable();
             $table->integer('category_id')->nullable()->unsigned();

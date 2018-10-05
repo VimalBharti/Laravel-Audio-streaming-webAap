@@ -40,18 +40,12 @@
 </pre>
             </b-tab-item>
 
-            <b-tab-item label="PSD" icon="fas fa fa-picture-o">
-              @if(isset($single->psd))
-                  <div class="download-psd has-text-centered">
-                      <h2 class="down-ps">Download PSD file</h2>
-                      <p>Free for personel use</p>
-                      <a href="{{ URL::to('/uploads/psd/' . $single->psd) }}" download="{{$single->psd}}">
-                          <img src="{{asset('images/psd-down.png')}}">
-                      </a>
-                  </div>
-              @else
-                  <h3 class="not-avail">PSD not available!</h3>
-              @endif
+            <b-tab-item label="JS" icon="fas fa fa-css3">
+<pre>
+<code class="language-html" data-lang="js">
+{{$single->js}}
+</code>
+</pre>
             </b-tab-item>
 
         </b-tabs>

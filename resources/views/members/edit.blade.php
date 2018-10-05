@@ -66,6 +66,13 @@
                   {{ Form::textarea('coding', null, ["class" => 'textarea']) }}
                 </div>
               </div>
+              <!-- JavaScript -->
+              <div class="field">
+                <label class="label">JavaScript : </label>
+                <div class="control">
+                  {{ Form::textarea('js', null, ["class" => 'textarea']) }}
+                </div>
+              </div>
 
               <!-- Keywords / description -->
               <div class="field">
@@ -99,12 +106,6 @@
             <ul>
               <li>Mention designer name if you use his/her design.</li>
               <li>with his/her social account url; (behance, dribbble, etc)</li>
-            </ul>
-
-            <h4>PSD</h4>
-            <ul>
-              <li>Upload only PSD File</li>
-              <li>Max PSD size: 6MB</li>
             </ul>
 
             <h4>Framework</h4>
