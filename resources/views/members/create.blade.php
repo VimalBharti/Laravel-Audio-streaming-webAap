@@ -100,7 +100,7 @@
               <div class="field">
                 <label class="label">JavaScript : </label>
                 <div class="control">
-                  <textarea class="textarea" name="js" placeholder="Markup Code" rows="10"></textarea>
+                  <textarea class="textarea" name="js" placeholder="JavaScript" rows="10"></textarea>
                 </div>
               </div>
 
