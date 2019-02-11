@@ -114,5 +114,12 @@ class HomeController extends Controller
     public function privacy(){return view('pages.privacy');}
     public function guideline(){return view('pages.guideline');}
 
+    public function listUser(){
+      $user = User::all()->toArray();
+      return response()->json($user);
+      // $user = User::all()->toJson();
+      // return view('all-user', compact('user'));
+    }
+
 
 }

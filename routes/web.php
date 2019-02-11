@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::any('/result', 'HomeController@search');
 
+Route::get('/list-users', 'HomeController@listUser')->name('listUser');
+
 // Members Dashbaord
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'UserController@dashboard')->name('member.dashboard');
