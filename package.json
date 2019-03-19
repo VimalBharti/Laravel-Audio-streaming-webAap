@@ -25,7 +25,9 @@
         "build": "^0.1.4",
         "bulma": "^0.7.1",
         "font-awesome": "^4.7.0",
+        "timespan": "^2.3.0",
         "vue-analytics": "^5.14.0",
-        "vue-router": "^3.0.1"
+        "vue-router": "^3.0.1",
+        "webpack-dev-server": "^3.2.1"
     }
 }
