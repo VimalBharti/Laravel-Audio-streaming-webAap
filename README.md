@@ -1,4 +1,3 @@
-# Vimal-Bharti - HindSynchro
 # Laravel-Audio-streaming-webAap
 # Bulma
 
