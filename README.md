@@ -1,2 +1,5 @@
+# Vimal-Bharti - HindSynchro
 # Laravel-Audio-streaming-webAap
-A responsive Laravel 5.6 audio streaming webApp with SQL
+# Bulma
+
+A responsive personal music streaming webApp that works built with Laravel 5.6, Bulma and SQL.
